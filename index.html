@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Device - интернет-магазин удивительных гаджетов</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
@@ -16,7 +18,8 @@
                     </a>
                 </p>
                 <div class="main-header__top">
-                    <input type="text" name="main-header__search" placeholder="Поиск по сайту">
+                    <input class="main-header__search" type="text" name="main-header__search"
+                        placeholder="Поиск по сайту">
                     <ul class="main-header__signin">
                         <li><a href="">Войти</a></li>
                     </ul>
@@ -68,9 +71,9 @@
                             width="526" height="334">
                     </div>
                     <div class="promo-slider__content">
-                        <p class="promo-slider__header">Делай селфи, как Бен Стиллер! </p>
-                        <p class="promo-slider__header">Худеем правильно! </p>
-                        <p class="promo-slider__header">Порхает как бабочка, жалит как пчела! </p>
+                        <h3 class="promo-slider__header">Делай селфи, как Бен Стиллер! </h3>
+                        <h3 class="promo-slider__header">Худеем правильно! </h3>
+                        <h3 class="promo-slider__header">Порхает как бабочка, жалит как пчела! </h3>
                         <p class="promo-slider__text">
                             Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров
                             длиной и весом всего 5 килограмм.
@@ -85,7 +88,7 @@
                         </p>
                         <div class="promo-slider__control">
                             <div class="promo-slider__btn">
-                                <a class="promo-slider__detail" href="">Подробнее</a>
+                                <a class="btn-general promo-slider__detail" href="">Подробнее</a>
                             </div>
                             <div class="promo-slider__radio">
                                 <input type="radio" name="promo-slide" class="promo-slider__slide" checked>
@@ -95,32 +98,32 @@
                         </div>
                         <div class="promo-slider__desc">
                             <div class="promo-slider__desc-item">
-                                <span>8,5 м</span>
-                                <span>Длина палки</span>
+                                <span class="promo-slider__desc-feature">8,5 м</span>
+                                <span class="promo-slider__desc-feature-detail">Длина палки</span>
                             </div>
                             <div class="promo-slider__desc-item">
-                                <span>5 кг</span>
-                                <span>Вес палки</span>
+                                <span class="promo-slider__desc-feature">5 кг</span>
+                                <span class="promo-slider__desc-feature-detail">Вес палки</span>
                             </div>
                             <div class="promo-slider__desc-item">
-                                <span>Карбон</span>
-                                <span>Материал</span>
-                            </div>
-                        </div>
-                        <div class="promo-slider__desc">
-                            <div class="promo-slider__desc-item">
-                                <span>48 часов</span>
-                                <span>Без подзарядки</span>
+                                <span class="promo-slider__desc-feature">Карбон</span>
+                                <span class="promo-slider__desc-feature-detail">Материал</span>
                             </div>
                         </div>
                         <div class="promo-slider__desc">
                             <div class="promo-slider__desc-item">
-                                <span>800 м</span>
-                                <span>Дальность полета</span>
+                                <span class="promo-slider__desc-feature">48 часов</span>
+                                <span class="promo-slider__desc-feature-detail">Без подзарядки</span>
+                            </div>
+                        </div>
+                        <div class="promo-slider__desc">
+                            <div class="promo-slider__desc-item">
+                                <span class="promo-slider__desc-feature">800 м</span>
+                                <span class="promo-slider__desc-feature-detail">Дальность полета</span>
                             </div>
                             <div class="promo-slider__desc-item">
-                                <span>50 м</span>
-                                <span>Радиус поражения</span>
+                                <span class="promo-slider__desc-feature">50 м</span>
+                                <span class="promo-slider__desc-feature-detail">Радиус поражения</span>
                             </div>
                         </div>
                     </div>
@@ -199,9 +202,9 @@
                 <h2 class="visually-hidden">Оказываемый сервис и предоставляемые условия</h2>
                 <div class="services-slider__control">
                     <ul class="services-slider_list">
-                        <li><a href="">Доставка</a></li>
-                        <li><a href="">Гарантия</a></li>
-                        <li><a href="">Кредит</a></li>
+                        <li><a class="btn-general" href="">Доставка</a></li>
+                        <li><a class="btn-general" href="">Гарантия</a></li>
+                        <li><a class="btn-general" href="">Кредит</a></li>
                     </ul>
                 </div>
                 <div class="services-slider__content">
@@ -248,27 +251,27 @@
                 <section class="about-us-contacts">
                     <h2 class="visually-hidden">О нас и контакты</h2>
                     <div class="about-us">
-                        <h3>О нас</h3>
-                        <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас. </p>
-                        <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими
+                        <h3 class="about-us__title">О нас</h3>
+                        <p class="about-us__paragraph">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас. </p>
+                        <p class="about-us__paragraph">Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими
                             транспортными компаниями:</p>
-                        <ul>
+                        <ul class="about-us__list">
                             <li>Деловые Линии</li>
                             <li>Автотрейдинг</li>
                             <li>ЖелДорЭкспедиция</li>
                         </ul>
-                        <a class="about-us-contacts__btn about-us__detail" href="">Подробнее о нас</a>
+                        <a class="btn-general about-us-contacts__btn about-us__detail" href="">Подробнее о нас</a>
                     </div>
                     <div class="contacts">
-                        <h3>Контакты</h3>
-                        <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить
+                        <h3 class="contacts__title">Контакты</h3>
+                        <p class="contacts__paragraph">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить
                             работоспособность покупки. Всякое бывает.</p>
                         <!-- <p>
                             <img src="https://via.placeholder.com/560x222" alt="Офис компании по адресу ул. Строителей 15, Москва" width="560" height="222">
                         </p> -->
                         <script type="text/javascript" charset="utf-8" async
                             src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8725f8e901859b7f7953308825252bf3ab3b4ba0a04f04419b6f2d8c5f27ed51&amp;width=560&amp;height=222&amp;lang=ru_RU&amp;scroll=true"></script>
-                        <a class="about-us-contacts__btn contacts__write-to-us" href="">Напишите нам</a>
+                        <a class="btn-general about-us-contacts__btn contacts__write-to-us" href="">Напишите нам</a>
                     </div>
                 </section>
             </div>
@@ -300,7 +303,7 @@
                 <div class="main-footer__middle">
                     <p class="main-footer__address">г. Москва, ул. Строителей, 15</p>
                     <div class="main-footer__navigation-middle">
-                        <ul>
+                        <ul class="main-footer__navigation">
                             <li><a href="">Доставка</a></li>
                             <li><a href="">Гарантия</a></li>
                             <li><a href="">Контакты</a></li>
@@ -309,7 +312,7 @@
                     <a class="main-footer__phone" href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
                 </div>
                 <div class="main-footer__bottom">
-                    <ul>
+                    <ul class="main-footer__social">
                         <li><a href="">Facebook</a></li>
                         <li><a href="">Instagram</a></li>
                         <li><a href="">Twitter</a></li>
