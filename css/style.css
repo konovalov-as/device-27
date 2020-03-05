@@ -3,32 +3,32 @@
   font-family: "Gilroy";
   font-weight: 300;
   font-style: normal;
-  src: url(../fonts/gilroylight.woff2) format("woff2"),
-    url(../fonts/gilroylight.woff) format("woff");
+  src: url("../fonts/gilroylight.woff2") format("woff2"),
+    url("../fonts/gilroylight.woff") format("woff");
 }
 
 @font-face {
   font-family: "Gilroy";
   font-weight: 800;
   font-style: normal;
-  src: url(../fonts/gilroyextrabold.woff2) format("woff2"),
-    url(../fonts/gilroyextrabold.woff) format("woff");
+  src: url("../fonts/gilroyextrabold.woff2") format("woff2"),
+    url("../fonts/gilroyextrabold.woff") format("woff");
 }
 
 @font-face {
   font-family: "OpenSans";
   font-weight: 300;
   font-style: normal;
-  src: url(../fonts/opensanslight.woff2) format("woff2"),
-    url(../fonts/opensanslight.woff) format("woff");
+  src: url("../fonts/opensanslight.woff2") format("woff2"),
+    url("../fonts/opensanslight.woff") format("woff");
 }
 
 @font-face {
   font-family: "OpenSans";
   font-weight: 400;
   font-style: normal;
-  src: url(../fonts/opensans.woff2) format("woff2"),
-    url(../fonts/opensans.woff) format("woff");
+  src: url("../fonts/opensans.woff2") format("woff2"),
+    url("../fonts/opensans.woff") format("woff");
 }
 
 /* General styles */
@@ -59,11 +59,11 @@ body {
   line-height: 24px;
   letter-spacing: 3.6px;
   text-transform: uppercase;
-  color: black;
   text-decoration: none;
 }
 
-/* Header index, catalog, promo and services slider, footer styles */
+/* Header index, catalog, promo and services slider,
+footer, breadcrumbs, filter, sort, catalog, pagination styles */
 .main-header__search,
 .main-header__signin a,
 .main-header__service a,
@@ -71,7 +71,9 @@ body {
 .promo-slider__text,
 .services-slider__text,
 .main-footer__signin a,
-.main-footer__service a {
+.main-footer__service a,
+.main-header__signout a,
+.main-footer__signout a {
   font-family: "OpenSans";
   font-weight: 300;
   font-size: 15px;
@@ -88,9 +90,23 @@ body {
 .main-footer__navigation a,
 .main-footer__phone,
 .main-footer__social a,
-.main-footer__developer {
+.main-footer__developer,
+.main-header__signout a,
+.breadcrumbs__list a,
+.catalog-content__sort-type a,
+.catalog-content__sort-direction a,
+.catalog-content-cards__list a,
+.catalog-content-pagination__list a,
+.main-footer__signout a,
+.main-footer__navigation-middle-list a {
   text-decoration: none;
   color: black;
+}
+
+.main-header__search,
+.main-header__signout .main-header__item-exit,
+.catalog-content-pagination__list a {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .main-header__signin,
@@ -102,14 +118,24 @@ body {
 .main-footer__signin,
 .main-footer__service,
 .main-footer__navigation,
-.main-footer__social {
+.main-footer__social,
+.main-header__signout,
+.breadcrumbs__list,
+.catalog-filter__color-list,
+.catalog-content__sort-type,
+.catalog-content__sort-direction,
+.catalog-content-cards__list,
+.catalog-content-pagination__list,
+.main-footer__signout,
+.main-footer__navigation-middle-list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
 .main-navigation,
-.main-footer__navigation {
+.main-footer__navigation,
+.main-footer__navigation-middle-list {
   font-family: "Gilroy";
   font-weight: 800;
   font-size: 18px;
@@ -125,7 +151,8 @@ body {
 }
 
 /* Main content styles */
-/* Promo slider, services slider, about us and contacts, footer styles*/
+/* Promo slider, services slider,
+about us and contacts, footer, catalog styles */
 .promo-slider__header,
 .services-slider_header,
 .about-us__title,
@@ -145,7 +172,8 @@ body {
 .contacts__title,
 .about-us__paragraph,
 .contacts__paragraph,
-.main-footer__address {
+.main-footer__address,
+.catalog-content-cards__title {
   margin: 0;
 }
 
@@ -173,8 +201,10 @@ body {
   letter-spacing: 0.13px;
 }
 
-/* Assortment style */
-.assortment__desc {
+/* Assortment, filter, catalog styles */
+.assortment__desc,
+.catalog-filter__form-goods legend,
+.catalog-content-cards__title {
   font-family: "Gilroy";
   font-weight: 800;
   font-size: 18px;
@@ -182,7 +212,7 @@ body {
   letter-spacing: 0.18px;
 }
 
-/* Services slider, about us and contacts */
+/* Services slider, about us and contacts styles */
 .services-slider_header,
 .about-us__title,
 .contacts__title {
@@ -214,8 +244,13 @@ body {
 
 /* Footer styles */
 .main-footer__signin a,
-.main-footer__service a {
+.main-footer__service a,
+.main-footer__signout a {
   color: rgba(255, 255, 255, 0.7);
+}
+
+.main-footer__signout .main-footer__item-signout {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .main-footer__address,
@@ -233,6 +268,107 @@ body {
 
 .main-footer__navigation a,
 .main-footer__social a,
-.main-footer__developer {
+.main-footer__developer,
+.main-footer__navigation-middle-list a {
   color: white;
 }
+
+/* modal windows */
+/* write to us */
+.modal__form-your-name,
+.modal__form-your-email,
+.modal__form-text-letter {
+  font-family: "Gilroy";
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.modal__form-your-name input,
+.modal__form-your-email input,
+.modal__form-text-letter textarea {
+  font-family: "OpenSans";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(70, 70, 70, 0.4);
+}
+
+/* page catalog styles */
+/* Main content styles */
+.main-header-page {
+  font-family: "Gilroy";
+  font-weight: 800;
+  font-size: 47px;
+  line-height: 48px;
+  letter-spacing: 0.47px;
+}
+
+.breadcrumbs__list a,
+.breadcrumbs__list li {
+  font-family: "OpenSans";
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.14px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+/* Filter styles */
+.catalog-filter__title,
+.catalog-content__title {
+  font-family: "Gilroy";
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 3.2px;
+  text-transform: uppercase;
+}
+
+.catalog-filter__color-list label {
+  font-family: "OpenSans";
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 40px;
+  letter-spacing: 0.14px;
+}
+
+.catalog-content__sort-type a,
+.catalog-content__sort-direction a {
+  font-family: "OpenSans";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+/* Catalog styles */
+.catalog-content-cards__price {
+  font-family: "Gilroy";
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.16px;
+  text-align: right;
+  color: #464646;
+}
+
+/* Pagination styles */
+.catalog-content-pagination__controls,
+.catalog-content-pagination__list a {
+  font-family: "Gilroy";
+  font-weight: 800;
+  line-height: 24px;
+  letter-spacing: 3.2px;
+  text-transform: uppercase;
+  text-decoration: none; 
+}
+
+.catalog-content-pagination__prev {
+  text-align: left;
+}
+
+.catalog-content-pagination__next {
+  text-align: right;
+}
+

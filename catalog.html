@@ -14,15 +14,15 @@
             <div class="container-narrow">
                 <p class="main-header__logo">
                     <a href="index.html">
-                        <img src="img/logo-device.svg" alt="Логотип интернет-магазина Device" width="163"
-                            height="35">
+                        <img src="img/logo-device.svg" alt="Логотип интернет-магазина Device" width="163" height="35">
                     </a>
                 </p>
                 <div class="main-header__top">
-                    <input class="main-header__search" type="text" name="main-header__search" placeholder="Поиск по сайту">
+                    <input class="main-header__search" type="text" name="main-header__search"
+                        placeholder="Поиск по сайту">
                     <ul class="main-header__signout">
                         <li><a href="">Валентин Петухов</a></li>
-                        <li><a href="">Выйти</a></li>
+                        <li><a class="main-header__item-exit" href="">Выйти</a></li>
                     </ul>
                     <ul class="main-header__service">
                         <li><a href="">Сравнить</a></li>
@@ -57,7 +57,7 @@
         </header>
 
         <main class="catalog-page">
-            <h1 class="">Моноподы для селфи в ассортименте</h1>
+            <h1 class="main-header-page">Моноподы для селфи в ассортименте</h1>
             <div class="container-narrow">
                 <div class="breadcrumbs">
                     <ul class="breadcrumbs__list">
@@ -129,7 +129,7 @@
                                             <label for="catalog-filter__bluetooth-no">Нет</label></li>
                                     </ul>
                                 </fieldset>
-                                <button class="catalog-filter__submit" type="submit">Показать</button>
+                                <button class="btn-general catalog-filter__submit" type="submit">Показать</button>
                             </form>
                         </div>
                     </section>
@@ -148,7 +148,7 @@
                                     <li><a href="">По типу</a></li>
                                     <li><a href="">По популярности</a></li>
                                 </ul>
-                                <ul clas="catalog-content__sort-direction">
+                                <ul class="catalog-content__sort-direction">
                                     <li><a href="">По возрастанию</a></li>
                                     <li><a href="">По убыванию</a></li>
                                 </ul>
@@ -156,55 +156,55 @@
                         </div>
                         <div class="catalog-content-cards">
                             <ul class="catalog-content-cards__list">
-                                <li class="catalog-content-item">
+                                <li class="catalog-content-cards__item">
+                                    <h3 class="catalog-content-cards__title">Любительская селфи-палка</h3>
                                     <a href="">
-                                        <h3>Любительская селфи-палка</h3>
                                         <img src="img/catalog-item-1.jpg"
                                             alt="Простая черная селфи-палка с белым телефоном" width="360" height="380">
-                                        <span>500 руб.</span>
                                     </a>
+                                    <span class="catalog-content-cards__price">500 руб.</span>
                                 </li>
-                                <li class="catalog-content-item">
+                                <li class="catalog-content-cards__item">
+                                    <h3 class="catalog-content-cards__title">Профессиональная селфи-палка </h3>
                                     <a href="">
-                                        <h3>Профессиональная селфи-палка </h3>
-                                        <img src="img/catalog-item-2.jpg"
-                                            alt="Профессиональная черная селфи-палка" width="360" height="380">
-                                        <span>1 500 руб.</span>
+                                        <img src="img/catalog-item-2.jpg" alt="Профессиональная черная селфи-палка"
+                                            width="360" height="380">
                                     </a>
+                                    <span class="catalog-content-cards__price">1 500 руб.</span>
                                 </li>
-                                <li class="catalog-content-item">
+                                <li class="catalog-content-cards__item">
+                                    <h3 class="catalog-content-cards__title">Непотопляемая селфи-палка</h3>
                                     <a href="">
-                                        <h3>Непотопляемая селфи-палка</h3>
                                         <img src="img/catalog-item-3.jpg"
                                             alt="Черно-желтая селфи-палка с черным шнурком и камерой" width="360"
                                             height="380">
-                                        <span>2 500 руб.</span>
                                     </a>
+                                    <span class="catalog-content-cards__price">2 500 руб.</span>
                                 </li>
-                                <li class="catalog-content-item">
+                                <li class="catalog-content-cards__item">
+                                    <h3 class="catalog-content-cards__title">Селфи-палка «Следуй за мной»</h3>
                                     <a href="">
-                                        <h3>Селфи-палка «Следуй за мной»</h3>
-                                        <img src="img/catalog-item-4.jpg"
-                                            alt="Селфи-палка в виде руки с телефоном" width="360" height="380">
-                                        <span>4 900 руб.</span>
+                                        <img src="img/catalog-item-4.jpg" alt="Селфи-палка в виде руки с телефоном"
+                                            width="360" height="380">
                                     </a>
+                                    <span class="catalog-content-cards__price">4 900 руб.</span>
                                 </li>
                             </ul>
                         </div>
                         <div class="catalog-content-pagination">
-                            <button class="catalog-content-pagination__prev" type="button">Назад</button>
+                            <button class="catalog-content-pagination__controls catalog-content-pagination__prev" type="button">Назад</button>
                             <ul class="catalog-content-pagination__list">
-                                <li class="catalog-content-pagination__list">
+                                <li class="catalog-content-pagination__item">
                                     <a href="">1</a>
                                 </li>
-                                <li class="catalog-content-pagination__list">
+                                <li class="catalog-content-pagination__item">
                                     <a href="">2</a>
                                 </li>
-                                <li class="catalog-content-pagination__list">
+                                <li class="catalog-content-pagination__item">
                                     <a href="">3</a>
                                 </li>
                             </ul>
-                            <button class="catalog-content-pagination__next" type="button">Вперед</button>
+                            <button class="catalog-content-pagination__controls catalog-content-pagination__next" type="button">Вперед</button>
                         </div>
                     </section>
                 </div>
@@ -218,14 +218,14 @@
                 <div class="main-footer__top">
                     <div class="main-footer__logo">
                         <a href="">
-                            <img src="img/logo-device.svg" alt="Логотип интернет-магазина Device"
-                                width="163" height="35">
+                            <img src="img/logo-device.svg" alt="Логотип интернет-магазина Device" width="163"
+                                height="35">
                         </a>
                     </div>
                     <div class="main-footer__navigation-top">
                         <ul class="main-footer__signout">
-                            <li><a href="">Валентин Петухов</a></li>
-                            <li><a href="">Выйти</a></li>
+                            <li><a class="main-footer__item-name" href="">Валентин Петухов</a></li>
+                            <li><a class="main-footer__item-signout" href="">Выйти</a></li>
                         </ul>
                         <ul class="main-footer__service">
                             <li><a href="">Сравнить</a></li>
@@ -236,7 +236,7 @@
                 <div class="main-footer__middle">
                     <p class="main-footer__address">г. Москва, ул. Строителей, 15</p>
                     <div class="main-footer__navigation-middle">
-                        <ul>
+                        <ul class="main-footer__navigation-middle-list">
                             <li><a href="">Доставка</a></li>
                             <li><a href="">Гарантия</a></li>
                             <li><a href="">Контакты</a></li>
@@ -245,7 +245,7 @@
                     <a class="main-footer__phone" href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
                 </div>
                 <div class="main-footer__bottom">
-                    <ul>
+                    <ul class="main-footer__social">
                         <li><a href="">Facebook</a></li>
                         <li><a href="">Instagram</a></li>
                         <li><a href="">Twitter</a></li>
@@ -255,7 +255,7 @@
             </div>
         </footer>
 
-     </div>
+    </div>
 
 </body>
 
