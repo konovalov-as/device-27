@@ -33,7 +33,7 @@
 
 /* General styles */
 body {
-  /* min-width: 1200px; */
+  min-width: 1200px;
   font-family: "OpenSans", "Gilroy", "Arial", sans-serif;
   color: black;
   font-size: 16px;
@@ -41,6 +41,13 @@ body {
   font-style: normal;
   line-height: 26px;
   letter-spacing: normal;
+}
+
+.container-narrow {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .visually-hidden {
@@ -60,10 +67,17 @@ body {
   letter-spacing: 3.6px;
   text-transform: uppercase;
   text-decoration: none;
+  color: black;
 }
 
-/* Header index, catalog, promo and services slider,
+/* Header index, catalog, promo and services slider, assortment,
 footer, breadcrumbs, filter, sort, catalog, pagination styles */
+.main-header__logo,
+.main-footer__logo {
+  width: 163px;
+  height: 35px;
+}
+
 .main-header__search,
 .main-header__signin a,
 .main-header__service a,
@@ -81,10 +95,13 @@ footer, breadcrumbs, filter, sort, catalog, pagination styles */
   letter-spacing: 0.15px;
 }
 
+.main-header__logo-container a,
 .main-header__signin a,
 .main-header__service a,
 .main-navigation a,
+.assortment__list a,
 .catalog-goods a,
+.services-slider_list a,
 .main-footer__signin a,
 .main-footer__service a,
 .main-footer__navigation a,
@@ -98,7 +115,8 @@ footer, breadcrumbs, filter, sort, catalog, pagination styles */
 .catalog-content-cards__list a,
 .catalog-content-pagination__list a,
 .main-footer__signout a,
-.main-footer__navigation-middle-list a {
+.main-footer__navigation-middle-list a,
+.main-footer__logo-container a {
   text-decoration: none;
   color: black;
 }
@@ -113,6 +131,7 @@ footer, breadcrumbs, filter, sort, catalog, pagination styles */
 .main-header__service,
 .main-navigation,
 .catalog-goods,
+.assortment__list,
 .services-slider_list,
 .about-us__list,
 .main-footer__signin,
@@ -131,6 +150,11 @@ footer, breadcrumbs, filter, sort, catalog, pagination styles */
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.main-header-bg,
+.assortment__bg {
+  background-color: rgba(240, 197, 46, 0.5);
 }
 
 .main-navigation,
@@ -164,15 +188,37 @@ about us and contacts, footer, catalog styles */
   letter-spacing: 0.47px;
 }
 
+.promo-slider__slide-1 {
+  width: 384px;
+  height: 486px;
+}
+
+.promo-slider__slide-2 {
+  width: 345px;
+  height: 485px;
+}
+
+.promo-slider__slide-3 {
+  width: 526px;
+  height: 334px;
+}
+
+.services-slider-bg {
+  background-color: #e5e5e5;
+}
+
+.main-header__logo-container,
 .promo-slider__header,
 .promo-slider__text,
 .services-slider_header,
 .services-slider__text,
+.partners__element,
 .about-us__title,
 .contacts__title,
 .about-us__paragraph,
 .contacts__paragraph,
 .main-footer__address,
+.main-header-page,
 .catalog-content-cards__title {
   margin: 0;
 }
@@ -212,6 +258,36 @@ about us and contacts, footer, catalog styles */
   letter-spacing: 0.18px;
 }
 
+.assortment__image-1 {
+  width: 97px;
+  height: 55px;
+}
+
+.assortment__image-2 {
+  width: 86px;
+  height: 117px;
+}
+
+.assortment__image-3 {
+  width: 71px;
+  height: 87px;
+}
+
+.assortment__image-4 {
+  width: 107px;
+  height: 65px;
+}
+
+.assortment__image-5 {
+  width: 56px;
+  height: 98px;
+}
+
+.assortment__image-6 {
+  width: 132px;
+  height: 69px;
+}
+
 /* Services slider, about us and contacts styles */
 .services-slider_header,
 .about-us__title,
@@ -224,7 +300,10 @@ about us and contacts, footer, catalog styles */
 }
 
 /* Partners styles */
-/* selectors */
+.partners__element img {
+  width: 260px;
+  height: 100px;
+}
 
 /* About us and contacts styles*/
 .about-us__paragraph,
@@ -240,6 +319,11 @@ about us and contacts, footer, catalog styles */
   font-weight: 800;
   font-size: 16px;
   line-height: 40px;
+}
+
+.contacts__map {
+  width: 560px;
+  height: 222px;
 }
 
 /* Footer styles */
@@ -273,8 +357,12 @@ about us and contacts, footer, catalog styles */
   color: white;
 }
 
-/* modal windows */
-/* write to us */
+.main-footer-bg {
+  background-color: #464646;
+}
+
+/* Modal windows */
+/* Write to us */
 .modal__form-your-name,
 .modal__form-your-email,
 .modal__form-text-letter {
@@ -292,6 +380,16 @@ about us and contacts, footer, catalog styles */
   font-size: 14px;
   line-height: 18px;
   color: rgba(70, 70, 70, 0.4);
+}
+
+.modal {
+  width: 960px;
+}
+
+/* Modal map */
+.modal__map-big img {
+  width: 960px;
+  height: 559px;
 }
 
 /* page catalog styles */
@@ -316,13 +414,23 @@ about us and contacts, footer, catalog styles */
 
 /* Filter styles */
 .catalog-filter__title,
-.catalog-content__title {
+.catalog-content__sort-title {
   font-family: "Gilroy";
   font-weight: 800;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 3.2px;
   text-transform: uppercase;
+}
+
+.catalog-filter__title {
+  background-color: #d9d9d9;
+}
+
+.catalog-filter__bg,
+.catalog-content-sorg-bg,
+.catalog-content-pagination {
+  background-color: #ebebeb;
 }
 
 .catalog-filter__color-list label {
@@ -351,6 +459,11 @@ about us and contacts, footer, catalog styles */
   letter-spacing: 0.16px;
   text-align: right;
   color: #464646;
+}
+
+.catalog-content-cards__item img {
+  width: 360px;
+  height: 380px;
 }
 
 /* Pagination styles */
