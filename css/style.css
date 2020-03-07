@@ -59,6 +59,7 @@ body {
 }
 
 .btn-general {
+  position: relative;
   font-family: "Gilroy";
   font-weight: 800;
   font-size: 18px;
@@ -70,12 +71,36 @@ body {
   color: black;
 }
 
+.btn-general::before {
+  position: absolute;
+  content: "";
+  z-index: -1;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 220px;
+  height: 8px;
+  background-color: #f0c52e;
+}
+
+.btn-general:hover::before,
+.btn-general:focus::before {
+  height: 40px;
+  transition: height 0.3s;
+}
+
+.btn-general:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
 /* Header index, catalog, promo and services slider, assortment,
-footer, breadcrumbs, filter, sort, catalog, pagination styles */
-.main-header__logo,
-.main-footer__logo {
-  width: 163px;
-  height: 35px;
+partners, footer, breadcrumbs, filter, sort, catalog, pagination styles */
+.main-header__logo-link:hover path,
+.main-header__logo-link:focus path {
+  fill: rgba(0, 0, 0, 0.6);
+}
+
+.main-header__logo-link:active path {
+  fill: rgba(0, 0, 0, 0.3);
 }
 
 .main-header__search,
@@ -102,6 +127,7 @@ footer, breadcrumbs, filter, sort, catalog, pagination styles */
 .assortment__list a,
 .catalog-goods a,
 .services-slider_list a,
+.partners__list a,
 .main-footer__signin a,
 .main-footer__service a,
 .main-footer__navigation a,
@@ -115,8 +141,8 @@ footer, breadcrumbs, filter, sort, catalog, pagination styles */
 .catalog-content-cards__list a,
 .catalog-content-pagination__list a,
 .main-footer__signout a,
-.main-footer__navigation-middle-list a,
-.main-footer__logo-container a {
+.main-footer__navigation-list a,
+.main-footer__logo-link {
   text-decoration: none;
   color: black;
 }
@@ -133,6 +159,7 @@ footer, breadcrumbs, filter, sort, catalog, pagination styles */
 .catalog-goods,
 .assortment__list,
 .services-slider_list,
+.partners__list,
 .about-us__list,
 .main-footer__signin,
 .main-footer__service,
@@ -146,7 +173,7 @@ footer, breadcrumbs, filter, sort, catalog, pagination styles */
 .catalog-content-cards__list,
 .catalog-content-pagination__list,
 .main-footer__signout,
-.main-footer__navigation-middle-list {
+.main-footer__navigation-list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -159,7 +186,7 @@ footer, breadcrumbs, filter, sort, catalog, pagination styles */
 
 .main-navigation,
 .main-footer__navigation,
-.main-footer__navigation-middle-list {
+.main-footer__navigation-list {
   font-family: "Gilroy";
   font-weight: 800;
   font-size: 18px;
@@ -172,6 +199,33 @@ footer, breadcrumbs, filter, sort, catalog, pagination styles */
 .main-footer__signin a,
 .main-footer__service a {
   line-height: 36px;
+}
+
+.main-header__search:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.main-header__search:focus {
+  color: black;
+  /* add css for btn search */
+}
+
+.main-header__signin a:hover,
+.main-header__signin a:focus,
+.main-header__service a:hover,
+.main-header__service a:focus,
+.main-navigation a:hover,
+.main-navigation a:focus,
+.catalog-goods a:hover,
+.catalog-goods a:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.main-header__signin a:active,
+.main-header__service a:active,
+.main-navigation a:active,
+.catalog-goods a:active {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 /* Main content styles */
@@ -212,7 +266,6 @@ about us and contacts, footer, catalog styles */
 .promo-slider__text,
 .services-slider_header,
 .services-slider__text,
-.partners__element,
 .about-us__title,
 .contacts__title,
 .about-us__paragraph,
@@ -288,6 +341,22 @@ about us and contacts, footer, catalog styles */
   height: 69px;
 }
 
+.assortment__link {
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+  width: 100%;
+}
+
+.assortment__link:hover,
+.assortment__link:focus {
+  background-color: #f0c52e;
+}
+
+.assortment__link:hover:active {
+  opacity: 30%;
+}
+
 /* Services slider, about us and contacts styles */
 .services-slider_header,
 .about-us__title,
@@ -300,9 +369,20 @@ about us and contacts, footer, catalog styles */
 }
 
 /* Partners styles */
-.partners__element img {
+.partners__list img {
   width: 260px;
   height: 100px;
+}
+
+.partners__list a {
+  opacity: 0.5;
+  filter: grayscale(1);
+}
+
+.partners__list a:hover,
+.partners__list a:focus {
+  opacity: 1;
+  filter: none;
 }
 
 /* About us and contacts styles*/
@@ -324,6 +404,12 @@ about us and contacts, footer, catalog styles */
 .contacts__map {
   width: 560px;
   height: 222px;
+}
+
+.modal__submit-form-write-to-us {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
 }
 
 /* Footer styles */
@@ -353,13 +439,77 @@ about us and contacts, footer, catalog styles */
 .main-footer__navigation a,
 .main-footer__social a,
 .main-footer__developer,
-.main-footer__navigation-middle-list a {
+.main-footer__navigation-list a {
   color: white;
 }
 
 .main-footer-bg {
   background-color: #464646;
 }
+
+.main-footer__logo-link path {
+  fill: rgba(255, 198, 0, 1);
+}
+
+.main-footer__logo-link:hover path,
+.main-footer__logo-link:focus path {
+  fill: rgba(255, 198, 0, 0.6);
+}
+
+.main-footer__logo-link:active path {
+  fill: rgba(255, 198, 0, 0.3);
+}
+
+.main-footer__signin a:hover,
+.main-footer__signin a:focus,
+.main-footer__service a:hover,
+.main-footer__service a:focus,
+.main-footer__signout a:hover,
+.main-footer__signout a:focus {
+  color: rgba(255, 255, 255, 1);
+}
+
+.main-footer__signin a:active,
+.main-footer__service a:active,
+.main-footer__signout a:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.main-footer__navigation-list a:hover,
+.main-footer__navigation-list a:focus {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.main-footer__navigation-list a:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.main-footer__social a {
+  opacity: 30%;
+}
+
+.main-footer__social a:hover,
+.main-footer__social a:focus {
+  opacity: 60%;
+}
+
+.main-footer__social a:active {
+  opacity: 10%;
+}
+
+.main-footer__developer {
+  color: #ffc600;
+}
+
+.main-footer__developer:hover,
+.main-footer__developer:focus {
+  opacity: 60%;
+}
+
+.main-footer__developer:active {
+  opacity: 30%;
+}
+
 
 /* Modal windows */
 /* Write to us */
@@ -392,7 +542,7 @@ about us and contacts, footer, catalog styles */
   height: 559px;
 }
 
-/* page catalog styles */
+/* Page catalog styles */
 /* Main content styles */
 .main-header-page {
   font-family: "Gilroy";
@@ -402,6 +552,7 @@ about us and contacts, footer, catalog styles */
   letter-spacing: 0.47px;
 }
 
+/* Breadcrumbs styles */
 .breadcrumbs__list a,
 .breadcrumbs__list li {
   font-family: "OpenSans";
@@ -412,7 +563,16 @@ about us and contacts, footer, catalog styles */
   color: rgba(0, 0, 0, 0.3);
 }
 
-/* Filter styles */
+.breadcrumbs__list a:hover,
+.breadcrumbs__list a:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.breadcrumbs__list a:active {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+/* Filter, sort styles */
 .catalog-filter__title,
 .catalog-content__sort-title {
   font-family: "Gilroy";
@@ -441,6 +601,12 @@ about us and contacts, footer, catalog styles */
   letter-spacing: 0.14px;
 }
 
+.catalog-filter__submit {
+  padding: 0;
+  border: 0;
+}
+
+/* Sort, pagination styles */
 .catalog-content__sort-type a,
 .catalog-content__sort-direction a {
   font-family: "OpenSans";
@@ -450,7 +616,29 @@ about us and contacts, footer, catalog styles */
   color: rgba(0, 0, 0, 0.3);
 }
 
-/* Catalog styles */
+.catalog-content__sort-direction a {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.catalog-content__sort-type a:hover,
+.catalog-content__sort-type a:focus,
+.catalog-content-pagination__list a:hover,
+.catalog-content-pagination__list a:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.catalog-content__sort-direction a:hover,
+.catalog-content__sort-direction a:focus {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.catalog-content__sort-type a:active,
+.catalog-content__sort-direction a:active,
+.catalog-content-pagination__list a:active {
+  color: rgba(0, 0, 0, 1);
+}
+
+/* Cards styles */
 .catalog-content-cards__price {
   font-family: "Gilroy";
   font-weight: 300;
@@ -467,6 +655,12 @@ about us and contacts, footer, catalog styles */
 }
 
 /* Pagination styles */
+.catalog-content-pagination__controls {
+  border: 0;
+  padding: 0;
+  background-color: #ebebeb;
+}
+
 .catalog-content-pagination__controls,
 .catalog-content-pagination__list a {
   font-family: "Gilroy";
@@ -475,6 +669,21 @@ about us and contacts, footer, catalog styles */
   letter-spacing: 3.2px;
   text-transform: uppercase;
   text-decoration: none; 
+}
+
+.catalog-content-pagination__controls:hover,
+.catalog-content-pagination__controls:focus {
+  background-color: #d9d9d9;
+}
+
+.catalog-content-pagination__controls:active {
+  background-color: #d9d9d9;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.catalog-content-pagination__controls:disabled {
+  opacity: 0.5;
+
 }
 
 .catalog-content-pagination__prev {
