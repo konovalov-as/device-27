@@ -31,20 +31,26 @@
                         </a>
                     </p>
                     <div class="main-header__top">
-                        <input class="main-header__search" type="text" name="main-header__search"
-                            placeholder="Поиск по сайту">
+                        <div class="main-header__search-container">
+                            <label class="visually-hidden" for="searchSite">Поиск по сайту</label>
+                            <input class="main-header__search" id="searchSite" type="text" name="main-header__search"
+                                placeholder="Поиск по сайту">
+                            <div class="main-header__search-go">
+                                <button type="button">Найти</button>
+                            </div>
+                        </div>
                         <ul class="main-header__signout">
                             <li><a href="">Валентин Петухов</a></li>
                             <li><a class="main-header__item-exit" href="">Выйти</a></li>
                         </ul>
                         <ul class="main-header__service">
-                            <li><a href="">Сравнить</a></li>
-                            <li><a href="">Корзина</a></li>
+                            <li><a class="main-header__compare" href="">Сравнить</a></li>
+                            <li><a class="main-header__basket" href="">Корзина</a></li>
                         </ul>
                     </div>
                     <nav class="main-header__navigation">
                         <ul class="main-navigation">
-                            <li><a href="">Каталог товаров</a></li>
+                            <li><a class="main-navigation__catalog-goods" href="">Каталог товаров</a></li>
                             <li><a href="">Доставка</a></li>
                             <li><a href="">Гарантия</a></li>
                             <li><a href="">Контакты</a></li>
@@ -178,37 +184,61 @@
                                     <ul class="catalog-content-cards__list">
                                         <li class="catalog-content-cards__item">
                                             <h3 class="catalog-content-cards__title">Любительская селфи-палка</h3>
-                                            <a href="">
+                                            <a class="catalog-content-cards__product" href="">
                                                 <img src="img/catalog-item-1.jpg"
                                                     alt="Простая черная селфи-палка с белым телефоном" width="360"
                                                     height="380">
                                             </a>
                                             <span class="catalog-content-cards__price">500 руб.</span>
+                                            <div class="catalog-content-cards__actions">
+                                                <a href="" class="btn-general catalog-content-cards__basket">В
+                                                    корзину</a>
+                                                <a href="" class="catalog-content-cards__compare">Добавить к
+                                                    сравнению</a>
+                                            </div>
                                         </li>
                                         <li class="catalog-content-cards__item">
                                             <h3 class="catalog-content-cards__title">Профессиональная селфи-палка </h3>
-                                            <a href="">
+                                            <a class="catalog-content-cards__product" href="">
                                                 <img src="img/catalog-item-2.jpg"
                                                     alt="Профессиональная черная селфи-палка" width="360" height="380">
                                             </a>
                                             <span class="catalog-content-cards__price">1 500 руб.</span>
+                                            <div class="catalog-content-cards__actions">
+                                                <a href="" class="btn-general catalog-content-cards__basket">В
+                                                    корзину</a>
+                                                <a href="" class="catalog-content-cards__compare">Добавить к
+                                                    сравнению</a>
+                                            </div>                                            
                                         </li>
                                         <li class="catalog-content-cards__item">
                                             <h3 class="catalog-content-cards__title">Непотопляемая селфи-палка</h3>
-                                            <a href="">
+                                            <a class="catalog-content-cards__product" href="">
                                                 <img src="img/catalog-item-3.jpg"
                                                     alt="Черно-желтая селфи-палка с черным шнурком и камерой"
                                                     width="360" height="380">
                                             </a>
                                             <span class="catalog-content-cards__price">2 500 руб.</span>
+                                            <div class="catalog-content-cards__actions">
+                                                <a href="" class="btn-general catalog-content-cards__basket">В
+                                                    корзину</a>
+                                                <a href="" class="catalog-content-cards__compare">Добавить к
+                                                    сравнению</a>
+                                            </div>
                                         </li>
                                         <li class="catalog-content-cards__item">
                                             <h3 class="catalog-content-cards__title">Селфи-палка «Следуй за мной»</h3>
-                                            <a href="">
+                                            <a class="catalog-content-cards__product" href="">
                                                 <img src="img/catalog-item-4.jpg"
                                                     alt="Селфи-палка в виде руки с телефоном" width="360" height="380">
                                             </a>
                                             <span class="catalog-content-cards__price">4 900 руб.</span>
+                                            <div class="catalog-content-cards__actions">
+                                                <a href="" class="btn-general catalog-content-cards__basket">В
+                                                    корзину</a>
+                                                <a href="" class="catalog-content-cards__compare">Добавить к
+                                                    сравнению</a>
+                                            </div>
                                         </li>
                                     </ul>
                                 </div>
@@ -299,6 +329,8 @@
         </div>
 
     </div>
+
+    <script src="js/script.js"></script>
 
 </body>
 

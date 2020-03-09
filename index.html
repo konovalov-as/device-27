@@ -31,19 +31,25 @@
                         </a>
                     </p>
                     <div class="main-header__top">
-                        <input class="main-header__search" type="text" name="main-header__search"
-                            placeholder="Поиск по сайту">
+                        <div class="main-header__search-container">
+                            <label class="visually-hidden" for="searchSite">Поиск по сайту</label>
+                            <input class="main-header__search" id="searchSite" type="text" name="main-header__search"
+                                placeholder="Поиск по сайту">
+                            <div class="main-header__search-go">
+                                <button type="button">Найти</button>
+                            </div>
+                        </div>
                         <ul class="main-header__signin">
-                            <li><a href="">Войти</a></li>
+                            <li><a class="main-header__enter" href="">Войти</a></li>
                         </ul>
                         <ul class="main-header__service">
-                            <li><a href="">Сравнить</a></li>
-                            <li><a href="">Корзина</a></li>
+                            <li><a class="main-header__compare" href="">Сравнить</a></li>
+                            <li><a class="main-header__basket" href="">Корзина</a></li>
                         </ul>
                     </div>
                     <nav class="main-header__navigation">
                         <ul class="main-navigation">
-                            <li><a href="catalog.html">Каталог товаров</a></li>
+                            <li><a class="main-navigation__catalog-goods" href="catalog.html">Каталог товаров</a></li>
                             <li><a href="">Доставка</a></li>
                             <li><a href="">Гарантия</a></li>
                             <li><a href="">Контакты</a></li>
@@ -74,73 +80,92 @@
             <div class="container-narrow">
                 <section class="promo-slider">
                     <h2 class="visually-hidden">Слайдер с продаваемыми товарами</h2>
-                    <div class="promo-slider__images">
-                        <img class="promo-slider__slide-1" src="img/promo-slider-1.png"
-                            alt="Три самых длинных палки для селфи черного цвета на трех ножках с черным ремешком "
-                            width="384" height="486">
-                        <img class="promo-slider__slide-2" src="img/promo-slider-2.png"
-                            alt="Стильный черный фитнес-браслет с небольшим монохромным дисплеем" width="345"
-                            height="485">
-                        <img class="promo-slider__slide-3" src="img/promo-slider-3.png"
-                            alt="Квадрокоптер с четыремя винтами и мощным лазером" width="526" height="334">
-                    </div>
-                    <div class="promo-slider__content">
-                        <h3 class="promo-slider__header">Делай селфи, как Бен Стиллер! </h3>
-                        <h3 class="promo-slider__header">Худеем правильно! </h3>
-                        <h3 class="promo-slider__header">Порхает как бабочка, жалит как пчела! </h3>
-                        <p class="promo-slider__text">
-                            Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров
-                            длиной и весом всего 5 килограмм.
-                        </p>
-                        <p class="promo-slider__text">
-                            Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать
-                            диету.
-                        </p>
-                        <p class="promo-slider__text">
-                            Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под
-                            стандартную камеру.
-                        </p>
-                        <div class="promo-slider__control">
-                            <div class="promo-slider__btn">
-                                <a class="btn-general promo-slider__detail" href="">Подробнее</a>
-                            </div>
-                            <div class="promo-slider__radio">
-                                <input type="radio" name="promo-slide" class="promo-slider__slide" checked>
-                                <input type="radio" name="promo-slide" class="promo-slider__slide">
-                                <input type="radio" name="promo-slide" class="promo-slider__slide">
-                            </div>
+                    <div class="promo-slider__control">
+                        <div class="promo-slider__btn">
+                            <a class="btn-general promo-slider__detail" href="">Подробнее</a>
                         </div>
-                        <div class="promo-slider__desc">
-                            <div class="promo-slider__desc-item">
-                                <span class="promo-slider__desc-feature">8,5 м</span>
-                                <span class="promo-slider__desc-feature-detail">Длина палки</span>
-                            </div>
-                            <div class="promo-slider__desc-item">
-                                <span class="promo-slider__desc-feature">5 кг</span>
-                                <span class="promo-slider__desc-feature-detail">Вес палки</span>
-                            </div>
-                            <div class="promo-slider__desc-item">
-                                <span class="promo-slider__desc-feature">Карбон</span>
-                                <span class="promo-slider__desc-feature-detail">Материал</span>
-                            </div>
-                        </div>
-                        <div class="promo-slider__desc">
-                            <div class="promo-slider__desc-item">
-                                <span class="promo-slider__desc-feature">48 часов</span>
-                                <span class="promo-slider__desc-feature-detail">Без подзарядки</span>
-                            </div>
-                        </div>
-                        <div class="promo-slider__desc">
-                            <div class="promo-slider__desc-item">
-                                <span class="promo-slider__desc-feature">800 м</span>
-                                <span class="promo-slider__desc-feature-detail">Дальность полета</span>
-                            </div>
-                            <div class="promo-slider__desc-item">
-                                <span class="promo-slider__desc-feature">50 м</span>
-                                <span class="promo-slider__desc-feature-detail">Радиус поражения</span>
-                            </div>
+                        <div class="promo-slider__radio">
+                            <input type="radio" name="promo-slide" class="promo-slider__slide" checked>
+                            <input type="radio" name="promo-slide" class="promo-slider__slide">
+                            <input type="radio" name="promo-slide" class="promo-slider__slide">
                         </div>
                     </div>
+                    <ul class="promo-slider__list">
+                        <li class="promo-slider__item">
+                            <div class="promo-slider__images">
+                                <img class="promo-slider__slide-1" src="img/promo-slider-1.png"
+                                    alt="Три самых длинных палки для селфи черного цвета на трех ножках с черным ремешком "
+                                    width="384" height="486">
+                            </div>
+                            <div class="promo-slider__content">
+                                <h3 class="promo-slider__header">Делай селфи, как Бен Стиллер! </h3>
+                                <p class="promo-slider__text">
+                                    Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!)
+                                    метров
+                                    длиной и весом всего 5 килограмм.
+                                </p>
+                                <div class="promo-slider__desc">
+                                    <div class="promo-slider__desc-item">
+                                        <span class="promo-slider__desc-feature">8,5 м</span>
+                                        <span class="promo-slider__desc-feature-detail">Длина палки</span>
+                                    </div>
+                                    <div class="promo-slider__desc-item">
+                                        <span class="promo-slider__desc-feature">5 кг</span>
+                                        <span class="promo-slider__desc-feature-detail">Вес палки</span>
+                                    </div>
+                                    <div class="promo-slider__desc-item">
+                                        <span class="promo-slider__desc-feature">Карбон</span>
+                                        <span class="promo-slider__desc-feature-detail">Материал</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="promo-slider__item">
+                            <div class="promo-slider__images">
+                                <img class="promo-slider__slide-2" src="img/promo-slider-2.png"
+                                    alt="Стильный черный фитнес-браслет с небольшим монохромным дисплеем" width="345"
+                                    height="485">
+                            </div>
+                            <div class="promo-slider__content">
+                                <h3 class="promo-slider__header">Худеем правильно! </h3>
+                                <p class="promo-slider__text">
+                                    Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и
+                                    соблюдать
+                                    диету.
+                                </p>
+                                <div class="promo-slider__desc">
+                                    <div class="promo-slider__desc-item">
+                                        <span class="promo-slider__desc-feature">48 часов</span>
+                                        <span class="promo-slider__desc-feature-detail">Без подзарядки</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="promo-slider__item">
+                            <div class="promo-slider__images">
+                                <img class="promo-slider__slide-3" src="img/promo-slider-3.png"
+                                    alt="Квадрокоптер с четыремя винтами и мощным лазером" width="526" height="334">
+                            </div>
+                            <div class="promo-slider__content">
+                                <h3 class="promo-slider__header">Порхает как бабочка, жалит как пчела! </h3>
+                                <p class="promo-slider__text">
+                                    Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным
+                                    под
+                                    стандартную камеру.
+                                </p>
+                                <div class="promo-slider__desc">
+                                    <div class="promo-slider__desc-item">
+                                        <span class="promo-slider__desc-feature">800 м</span>
+                                        <span class="promo-slider__desc-feature-detail">Дальность полета</span>
+                                    </div>
+                                    <div class="promo-slider__desc-item">
+                                        <span class="promo-slider__desc-feature">50 м</span>
+                                        <span class="promo-slider__desc-feature-detail">Радиус поражения</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
                 </section>
             </div>
 
@@ -148,7 +173,7 @@
                 <section class="assortment">
                     <h2 class="visually-hidden">Ассортимент интернет-магазина Device</h2>
                     <ul class="assortment__list">
-                        <li>
+                        <li class="assortment__item">
                             <div class="assortment__inner">
                                 <div class="assortment__bg">
                                     <a class="assortment__link" href="">
@@ -159,7 +184,7 @@
                                 <span class="assortment__desc">Виртуальная реальность</span>
                             </div>
                         </li>
-                        <li>
+                        <li class="assortment__item">
                             <div class="assortment__inner">
                                 <div class="assortment__bg">
                                     <a class="assortment__link" href="">
@@ -170,7 +195,7 @@
                                 <span class="assortment__desc">Моноподы для селфи</span>
                             </div>
                         </li>
-                        <li>
+                        <li class="assortment__item">
                             <div class="assortment__inner">
                                 <div class="assortment__bg">
                                     <a class="assortment__link" href="">
@@ -181,7 +206,7 @@
                                 <span class="assortment__desc">Экшн-камеры</span>
                             </div>
                         </li>
-                        <li>
+                        <li class="assortment__item">
                             <div class="assortment__inner">
                                 <div class="assortment__bg">
                                     <a class="assortment__link" href="">
@@ -192,7 +217,7 @@
                                 <span class="assortment__desc">Фитнес-браслеты</span>
                             </div>
                         </li>
-                        <li>
+                        <li class="assortment__item">
                             <div class="assortment__inner">
                                 <div class="assortment__bg">
                                     <a class="assortment__link" href="">
@@ -203,7 +228,7 @@
                                 <span class="assortment__desc">Умные часы</span>
                             </div>
                         </li>
-                        <li>
+                        <li class="assortment__item">
                             <div class="assortment__inner">
                                 <div class="assortment__bg">
                                     <a class="assortment__link" href="">
@@ -223,35 +248,45 @@
                     <section class="services-slider">
                         <h2 class="visually-hidden">Оказываемый сервис и предоставляемые условия</h2>
                         <div class="services-slider__control">
-                            <ul class="services-slider_list">
+                            <ul class="services-slider__list">
                                 <li><a class="btn-general" href="">Доставка</a></li>
                                 <li><a class="btn-general" href="">Гарантия</a></li>
                                 <li><a class="btn-general" href="">Кредит</a></li>
                             </ul>
                         </div>
-                        <div class="services-slider__content">
-                            <h3 class="services-slider_header">Доставка</h3>
-                            <p class="services-slider__text">Мы с удовольствием доставим ваш товар прямо к вашему
-                                подъезду
-                                совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
-                            </p>
-                        </div>
-                        <div class="services-slider__content">
-                            <h3 class="services-slider_header">Гарантия</h3>
-                            <p class="services-slider__text">Если из-за возгорания купленного у нас товара у вас сгорит
-                                дом
-                                — не
-                                переживайте, мы выдадим вам новый. Товар, не дом, конечно же.
-                            </p>
-                        </div>
-                        <div class="services-slider__content">
-                            <h3 class="services-slider_header">Кредит</h3>
-                            <p class="services-slider__text">
-                                Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее
-                                выгодные
-                                условия кредита. Выгодные для нашего банка, разумеется.
-                            </p>
-                        </div>
+
+                        <ul class="services-slider__list-content">
+                            <li class="services-slider__item-content">
+                                <div class="services-slider__content">
+                                    <h3 class="services-slider_header">Доставка</h3>
+                                    <p class="services-slider__text">Мы с удовольствием доставим ваш товар прямо к
+                                        вашему
+                                        подъезду
+                                        совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="services-slider__item-content">
+                                <div class="services-slider__content">
+                                    <h3 class="services-slider_header">Гарантия</h3>
+                                    <p class="services-slider__text">Если из-за возгорания купленного у нас товара у вас сгорит
+                                        дом
+                                        — не
+                                        переживайте, мы выдадим вам новый. Товар, не дом, конечно же.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="services-slider__item-content">
+                                <div class="services-slider__content">
+                                    <h3 class="services-slider_header">Кредит</h3>
+                                    <p class="services-slider__text">
+                                        Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее
+                                        выгодные
+                                        условия кредита. Выгодные для нашего банка, разумеется.
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
                     </section>
                 </div>
             </div>
@@ -410,8 +445,8 @@
                 <h2 class="visually-hidden">Наш офис компании на карте</h2>
                 <div class="modal__map-container">
                     <p class="visually-hidden modal__map-big">
-                        <img src="img/map-big.jpg"
-                            alt="Офис компании по адресу ул. Строителей 15, г. Москва" width="960" height="559">
+                        <img src="img/map-big.jpg" alt="Офис компании по адресу ул. Строителей 15, г. Москва"
+                            width="960" height="559">
                     </p>
                     <p class="modal__map-big-interactive">
                         <script type="text/javascript" charset="utf-8" async
@@ -425,6 +460,8 @@
         </div>
 
     </div>
+
+    <script src="js/script.js"></script>
 
 </body>
 
