@@ -548,7 +548,7 @@ about us and contacts, footer, catalog styles */
 }
 
 .promo-slider__header {
-  max-width: 395px;
+  max-width: 396px;
   margin-top: 80px;
   margin-bottom: 18px;
 }
@@ -683,6 +683,23 @@ about us and contacts, footer, catalog styles */
 .about-us__title,
 .contacts__title {
   line-height: 48px;
+}
+
+.about-us__title,
+.contacts__title {
+  position: relative;
+}
+
+.about-us__title::before,
+.contacts__title::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 80px;
+  height: 7px;
+  background-color: black;
+  position: absolute;
+  top: -30px;
 }
 
 .services-slider {
@@ -838,6 +855,25 @@ about us and contacts, footer, catalog styles */
 
 .about-us__list {
   margin-bottom: 60px;
+}
+
+.about-us__list li {
+  position: relative;
+  margin-left: 30px;
+}
+
+.about-us__list li::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  transform: translateY(-50%);
+  border: 2px solid #e5e5e5;
+  border-radius: 50%;
 }
 
 .contacts {
@@ -1006,6 +1042,96 @@ about us and contacts, footer, catalog styles */
   margin-right: 30px;
 }
 
+/* .main-header__basket, */
+/* .main-navigation__catalog-goods */ 
+.main-footer__enter,
+.main-footer__compare,
+.main-footer__basket {
+  position: relative;
+}
+
+/* .main-header__basket::before, */
+/* .main-navigation__catalog-goods::after */
+.main-footer__enter::before,
+.main-footer__compare::before,
+.main-footer__basket::before { 
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.main-footer__enter::before {
+  top: 4px;
+  left: -25px;
+  width: 13px;
+  height: 12px;
+  background-image: url("../img/user-footer.svg");
+}
+
+.main-footer__compare::before {
+  top: 6px;
+  left: -20px;
+  width: 10px;
+  height: 10px;
+  background-image: url("../img/compare-footer.svg");
+}
+
+.main-footer__basket::before {
+  top: 4px;
+  left: -21px;
+  width: 12px;
+  height: 12px;
+  background-image: url("../img/cart-footer.svg");
+}
+
+.main-footer__facebook,
+.main-footer__instagram,
+.main-footer__twitter {
+  display: block;
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.main-footer__facebook {
+  background-image: url("../img/fb.svg");
+}
+
+.main-footer__instagram {
+  background-image: url("../img/instagram.svg");
+}
+
+.main-footer__twitter {
+  background-image: url("../img/twitter.svg");
+}
+
+.main-footer__developer {
+  display: block;
+  width: 27px;
+  height: 35px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../img/logo-html.svg");
+}
+
+.main-footer__bottom {
+  position: relative;
+}
+
+.main-footer__bottom::before {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  bottom: 5px;
+  left: 0;
+  width: 80px;
+  height: 7px;
+  background-color: #ffc600;
+}
+
 /* Modal windows */
 /* Write to us */
 .modal__form-your-name,
@@ -1027,17 +1153,40 @@ about us and contacts, footer, catalog styles */
   color: rgba(70, 70, 70, 0.4);
 }
 
+.modal__form-text-letter textarea {
+  resize: none;
+}
+
 .modal {
   width: 960px;
   position: relative;
   box-shadow: 0px 10px 20px 0 rgba(4, 6, 6, 0.2);
   margin: 0 auto;
+  position: relative;
 }
 
 .modal__close {
   position: absolute;
+  content: "";
   top: 20px;
   right: 20px;
+  width: 55px;
+  height: 55px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../img/modal-close.svg");
+  opacity: 0.5;
+  border: 0;
+}
+
+.modal__close:hover,
+.modal__close:focus {
+  opacity: 1;
+}
+
+.modal__close:active {
+  opacity: 0.3;
 }
 
 .modal__form-write-to-us {
@@ -1054,7 +1203,28 @@ about us and contacts, footer, catalog styles */
 
 .modal__form-container input {
   height: 50px;
-  border: 3px solid lightgrey;
+  border: 3px solid #f2f2f2;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.modal__form-container input:hover,
+.modal__form-text-letter textarea:hover {
+  background-color: #eaeaea;
+  color: rgba(70, 70, 70, 0.4);
+  border-color: #eaeaea;
+}
+
+.modal__form-container input:focus,
+.modal__form-text-letter textarea:focus  {
+  background-color: white;
+  color: #464646;
+  border-color: #f0c52e;
+}
+
+.modal__form-container input:invalid {
+  background-color: #f6dada;
+  border-color: #f6dada;
 }
 
 .modal__form-container label,
@@ -1063,7 +1233,8 @@ about us and contacts, footer, catalog styles */
 }
 
 .modal__form-text-letter textarea {
-  border: 3px solid lightgrey;
+  border: 3px solid #f2f2f2;
+  background-color: #f2f2f2;
 }
 
 .modal__form-your-name,
