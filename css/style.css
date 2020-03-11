@@ -343,6 +343,10 @@ filter, sort, catalog, pagination styles */
   background-image: url("../img/plus.svg");
 }
 
+.main-header__signout {
+  margin-right: 86px;
+}
+
 .main-header__signout li:first-child {
   margin-right: 20px;
 }
@@ -1315,9 +1319,27 @@ about us and contacts, footer, catalog styles */
   color: rgba(0, 0, 0, 0.1);
 }
 
+.breadcrumbs__link {
+  position: relative;
+}
+
+.breadcrumbs__link::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: -18px;
+  width: 4px;
+  height: 7px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../img/nav-arrow.svg");
+}
+
 /* Background catalog section */
 .catalog-bg {
-  background-color: white;
+   background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.08) 70px, transparent 70px),
+    linear-gradient(to right, #efefef 28%, transparent 28%);
 }
 
 /* Catalog styles */
