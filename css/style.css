@@ -694,7 +694,7 @@ about us and contacts, footer, catalog styles */
 .services-slider__control {
   position: relative;
   top: -15px;
-  width: 280px;
+  width: 285px;
 }
 
 .services-slider__list {
@@ -728,6 +728,42 @@ about us and contacts, footer, catalog styles */
   width: 433px;
 }
 
+.services-slider__item-content:nth-child(1) .services-slider__text::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  right: -100px;
+  width: 136px;
+  height: 164px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../img/delivery.svg");
+}
+
+.services-slider__item-content:nth-child(2) .services-slider__text::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  right: -100px;
+  width: 136px;
+  height: 164px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../img/warranty.svg");
+}
+
+.services-slider__item-content:nth-child(3) .services-slider__text::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  right: -100px;
+  width: 136px;
+  height: 164px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../img/credit.svg");
+}
+
 /* Partners styles */
 .partners__list img {
   width: 260px;
@@ -751,7 +787,7 @@ about us and contacts, footer, catalog styles */
 }
 
 .partners {
-  margin-bottom: 90px;
+  margin-bottom: 138px;
 }
 
 /* About us and contacts styles*/
@@ -789,15 +825,23 @@ about us and contacts, footer, catalog styles */
 
 .about-us__title,
 .contacts__title {
-  margin-bottom: 50px;
+  margin-bottom: 43px;
 }
 
 .about-us__paragraph {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+
+.about-us__paragraph--two {
+  margin-bottom: 65px;
 }
 
 .about-us__list {
   margin-bottom: 60px;
+}
+
+.contacts {
+  padding-left: 40px;
 }
 
 .contacts__paragraph {
