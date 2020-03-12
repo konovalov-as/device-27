@@ -1339,19 +1339,20 @@ about us and contacts, footer, catalog styles */
 .catalog-bg {
    background-image:
     linear-gradient(to bottom, rgba(0, 0, 0, 0.08) 70px, transparent 70px),
-    linear-gradient(to right, #efefef 28%, transparent 28%);
+    linear-gradient(to right, #efefef 36.9%, transparent 36.9%);
 }
 
 /* Catalog styles */
 .catalog-container {
   display: flex;
+  padding-left: 60px;
 }
 
 .catalog-container-left {
   display: flex;
-  flex-basis: 300px;
+  flex-basis: 270px;
   flex-shrink: 0;
-  padding-right: 60px;
+  /* padding-right: 60px; */
   padding-bottom: 70px;
 }
 
@@ -1366,8 +1367,9 @@ about us and contacts, footer, catalog styles */
 }
 
 .catalog-filter__title {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 23px;
+  padding-bottom: 23px;
+  margin-bottom: 70px;
 }
 
 .catalog-content__sort-title {
@@ -1526,7 +1528,7 @@ about us and contacts, footer, catalog styles */
   background-color: #d9d9d9;
 }
 
-.catalog-filter__bg,
+/* .catalog-filter__bg, */
 .catalog-content-sorg-bg,
 .catalog-content-pagination {
   background-color: #ebebeb;
@@ -1543,6 +1545,66 @@ about us and contacts, footer, catalog styles */
 .catalog-filter__submit {
   padding: 0;
   border: 0;
+}
+
+.catalog-filter__form-goods fieldset {
+  border: 0;
+}
+
+/* checkbox */
+.catalog-filter__color-item label{
+  position: relative;
+  padding-left: 40px;
+  cursor: pointer;
+}
+
+.catalog-filter__color-item input[type="checkbox"] + .checkbox-indicator {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 23px;
+  height: 23px;
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+}
+
+/* checkbox checked */
+.catalog-filter__color-item input[type="checkbox"]:checked + .checkbox-indicator {
+  width: 27px;
+  background-image: url("../img/checkbox-on.svg");
+}
+
+/* disabled */
+.catalog-filter__color-item input[type="checkbox"]:disabled + .checkbox-indicator {
+  opacity: 0.25;
+}
+
+/* checked+disabled */
+.catalog-filter__color-item input[type="checkbox"]:checked:disabled + .checkbox-indicator {
+  opacity: 0.25;
+}
+
+/* checkbox hover */
+.catalog-filter__color-item input[type="checkbox"]:hover + .checkbox-indicator {
+  opacity: 0.6;
+}
+
+.catalog-filter__color-item input[type="checkbox"]:active + .checkbox-indicator {
+  opacity: 1;
+}
+
+/* checkbox outline */
+.catalog-filter__color-item input[type="checkbox"]:focus + .checkbox-indicator {
+  background-image: url("../img/checkbox-off.svg");
+  box-shadow: 0px 0px 0px 4px #4A90E2;
+  border-radius: 4px;
+}
+
+.catalog-filter__color-item input[type="checkbox"]:checked:focus + .checkbox-indicator {
+  width: 27px;
+  background-image: url("../img/checkbox-on.svg");
+  box-shadow: 0px 0px 0px 4px #4A90E2;
+  border-radius: 4px;
 }
 
 /* Sort, pagination styles */
