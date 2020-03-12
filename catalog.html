@@ -104,22 +104,33 @@
                                     <form class="catalog-filter__form-goods" method="post" action="https://echo.htmlacademy.ru">
                                         <fieldset class="catalog-filter__range">
                                             <legend>Стоимость</legend>
-                                            <!-- Сделать двойной range по стоимости -->
-                                            <p>Вставить range</p>
+                                            <div class="range-filter">
+                                                <div class="range-controls">
+                                                    <div class="scale">
+                                                        <div class="bar"></div>
+                                                    </div>
+                                                    <div class="toggle toggle-min"></div>
+                                                    <div class="toggle toggle-max"></div>
+                                                </div>
+                                                <div class="price-controls">
+                                                    <label class="min-price">от <input class="no-arrow" name="min-price" type="number" placeholder="0" min="0"></label>
+                                                    <label class="max-price">до <input class="no-arrow" name="max-price" type="number" placeholder="5000" min="0"></label>
+                                                </div>
+                                            </div>
                                         </fieldset>
                                         <fieldset class="catalog-filter__color">
                                             <legend>Цвет</legend>
                                             <ul class="catalog-filter__color-list">
                                                 <li class="catalog-filter__color-item">
                                                     <label for="catalog-filter__color-black">
-                                                        <input class="visually-hidden" type="checkbox" name="colorBlack" id="catalog-filter__color-black" checked disabled>
+                                                        <input class="visually-hidden" type="checkbox" name="colorBlack" id="catalog-filter__color-black" checked>
                                                         <span class="checkbox-indicator"></span>
                                                         Черный
                                                     </label>
                                                 </li>
                                                 <li class="catalog-filter__color-item">
                                                     <label for="catalog-filter__color-wihte">
-                                                        <input class="visually-hidden" type="checkbox" name="colorWhite" id="catalog-filter__color-wihte" disabled>
+                                                        <input class="visually-hidden" type="checkbox" name="colorWhite" id="catalog-filter__color-wihte">
                                                         <span class="checkbox-indicator"></span>
                                                         Белый
                                                     </label>
@@ -151,12 +162,19 @@
                                             <legend>Bluetooth</legend>
                                             <ul class="catalog-filter__bluetooth-list">
                                                 <li class="catalog-filter__bluetooth-item">
-                                                    <input class="v-h" type="radio" name="bluetooth" value="bluetoothYes" id="catalog-filter__bluetooth-yes" checked>
-                                                    <label for="catalog-filter__bluetooth-yes">Есть</label>
+                                                    <label for="catalog-filter__bluetooth-yes">
+                                                        <input class="visually-hidden" type="radio" name="bluetooth" value="bluetoothYes" id="catalog-filter__bluetooth-yes" checked>
+                                                        <span class="radio-indicator"></span>
+                                                        Есть
+                                                    </label>
                                                 </li>
                                                 <li class="catalog-filter__bluetooth-item">
-                                                    <input class="v-h" type="radio" name="bluetooth" value="bluetoothNo" id="catalog-filter__bluetooth-no">
-                                                    <label for="catalog-filter__bluetooth-no">Нет</label></li>
+                                                    <label for="catalog-filter__bluetooth-no">
+                                                        <input class="visually-hidden" type="radio" name="bluetooth" value="bluetoothNo" id="catalog-filter__bluetooth-no">
+                                                        <span class="radio-indicator"></span>
+                                                        Нет
+                                                    </label>
+                                                </li>
                                             </ul>
                                         </fieldset>
                                         <button class="btn-general catalog-filter__submit" type="submit">Показать</button>

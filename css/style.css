@@ -77,8 +77,18 @@ body {
   margin: -1px;
 }
 
+.no-arrow::-webkit-outer-spin-button,
+.no-arrow::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.no-arrow {
+  -moz-appearance: textfield;
+}
+
 .btn-general {
   position: relative;
+  z-index: 10;
   font-family: "Gilroy";
   font-weight: 800;
   font-size: 18px;
@@ -190,6 +200,7 @@ filter, sort, catalog, pagination styles */
 .main-header__signout,
 .breadcrumbs__list,
 .catalog-filter__color-list,
+.catalog-filter__bluetooth-list,
 .catalog-content__sort-type,
 .catalog-content__sort-direction,
 .catalog-content-cards__list,
@@ -1339,7 +1350,7 @@ about us and contacts, footer, catalog styles */
 .catalog-bg {
    background-image:
     linear-gradient(to bottom, rgba(0, 0, 0, 0.08) 70px, transparent 70px),
-    linear-gradient(to right, #efefef 36.9%, transparent 36.9%);
+    linear-gradient(to right, #efefef 36.4%, transparent 36.4%);
 }
 
 /* Catalog styles */
@@ -1369,7 +1380,7 @@ about us and contacts, footer, catalog styles */
 .catalog-filter__title {
   padding-top: 23px;
   padding-bottom: 23px;
-  margin-bottom: 70px;
+  margin-bottom: 87px;
 }
 
 .catalog-content__sort-title {
@@ -1528,12 +1539,13 @@ about us and contacts, footer, catalog styles */
   background-color: #d9d9d9;
 }
 
-/* .catalog-filter__bg, */
+/* Catalog filter bg, */
 .catalog-content-sorg-bg,
 .catalog-content-pagination {
   background-color: #ebebeb;
 }
 
+/* Form filter  */
 .catalog-filter__color-list label {
   font-family: "OpenSans";
   font-weight: 300;
@@ -1549,7 +1561,162 @@ about us and contacts, footer, catalog styles */
 
 .catalog-filter__form-goods fieldset {
   border: 0;
+  padding: 0;
 }
+
+.catalog-filter__form-goods legend {
+  position: relative;
+}
+
+.catalog-filter__form-goods legend::before {
+  content: "";
+  position: absolute;
+  top: -16px;
+  left: 0;
+  width: 201px;
+  height: 2px;
+  background-color: black;
+}
+
+.catalog-filter__range,
+.catalog-filter__color {
+  margin-bottom: 60px;
+}
+
+.catalog-filter__color legend {
+  margin-bottom: 20px;
+}
+
+.catalog-filter__bluetooth {
+  margin-bottom: 50px;
+}
+
+.catalog-filter__bluetooth legend{
+  margin-bottom: 20px;
+}
+
+.catalog-filter__bluetooth-list li {
+  margin-bottom: 15px;
+}
+
+/* Range */
+/* Style HTML Academy */
+.filter-item {
+  /* margin: 0; */
+  /* padding: 0; */
+  /* border: none; */
+  /* Для демонстрации */
+  /* width: 260px; */
+  /* margin: 50px auto;  */
+}
+
+.range-filter {
+  /* width: 260px; */
+  /* margin-top: 49px; */
+}
+
+.filter-item legend {
+  /* font-size: 18px; */
+  /* line-height: 24px; */
+  /* text-transform: uppercase; */
+  /* font-weight: 700; */
+}
+
+.range-controls {
+  position: relative;
+  height: 41px;
+  /* margin-bottom: 15px; */
+  padding-top: 30px;
+  /* padding-right: 50px; */
+  /* padding-left: 10px; */
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  width: 205px;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: #ebebeb;
+}
+
+.range-controls .bar {
+  width: 55%;
+  height: 2px;
+  background: #91c92f;
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 21px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 10px solid #ffffff;
+  background-color: #ababab;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.range-controls .toggle::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: rgb(171, 171, 171);
+}
+
+.range-controls .toggle-min {
+  left: 0px;
+}
+
+.range-controls .toggle-max {
+  left: 110px;
+}
+
+.price-controls {
+  font-size: 0;
+}
+
+.price-controls label,
+.price-controls input {
+  font-family: "Gilroy";
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.price-controls label {
+  /* display: inline-block; */
+  /* vertical-align: middle; */
+  /* width: 50%; */
+}
+
+.price-controls input {
+  width: 37px;
+  /* padding: 8px 10px; */
+  /* margin-left: 10px; */
+  border: none;
+  border-radius: 5px;
+  background: #efefef;
+}
+
+.price-controls input::placeholder {
+  color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+}
+
+.max-price {
+  text-align: right;
+}
+/* Style HTML Academy */
 
 /* checkbox */
 .catalog-filter__color-item label{
@@ -1603,6 +1770,58 @@ about us and contacts, footer, catalog styles */
 .catalog-filter__color-item input[type="checkbox"]:checked:focus + .checkbox-indicator {
   width: 27px;
   background-image: url("../img/checkbox-on.svg");
+  box-shadow: 0px 0px 0px 4px #4A90E2;
+  border-radius: 4px;
+}
+
+/* radio */
+.catalog-filter__bluetooth-item label{
+  position: relative;
+  padding-left: 40px;
+  cursor: pointer;
+}
+
+.catalog-filter__bluetooth-item input[type="radio"] + .radio-indicator {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 25px;
+  height: 25px;
+  background-image: url("../img/radio-off.svg");
+  background-repeat: no-repeat;
+}
+
+/* radio checked */
+.catalog-filter__bluetooth-item input[type="radio"]:checked + .radio-indicator {
+  background-image: url("../img/radio-on.svg");
+}
+
+/* disabled */
+.catalog-filter__bluetooth-item input[type="radio"]:disabled + .radio-indicator {
+  opacity: 0.25;
+}
+
+/* checked+disabled */
+.catalog-filter__bluetooth-item input[type="radio"]:checked:disabled + .radio-indicator {
+  opacity: 0.25;
+}
+
+/* radio hover */
+.catalog-filter__bluetooth-item input[type="radio"]:hover + .radio-indicator {
+  opacity: 0.6;
+}
+
+.catalog-filter__bluetooth-item input[type="radio"]:active + .radio-indicator {
+  opacity: 1;
+}
+
+/* radio outline */
+.catalog-filter__bluetooth-item input[type="radio"]:focus + .radio-indicator {
+  box-shadow: 0px 0px 0px 4px #4A90E2;
+  border-radius: 4px;
+}
+
+.catalog-filter__bluetooth-item input[type="radio"]:checked:focus + .radio-indicator {
   box-shadow: 0px 0px 0px 4px #4A90E2;
   border-radius: 4px;
 }
