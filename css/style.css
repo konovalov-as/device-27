@@ -1014,6 +1014,7 @@ about us and contacts, footer, catalog styles */
 
 .main-footer__navigation-top {
   display: flex;
+  align-items: center;
 }
 
 .main-footer__signin li {
@@ -1397,6 +1398,7 @@ about us and contacts, footer, catalog styles */
 .catalog-content__sort {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -1420,7 +1422,7 @@ about us and contacts, footer, catalog styles */
 }
 
 .catalog-content__sort-direction li:first-child {
-  margin-right: 30px;
+  margin-right: 20px;
 }
 
 /* Cards list styles */
@@ -1679,6 +1681,11 @@ about us and contacts, footer, catalog styles */
   left: 110px;
 }
 
+.range-controls .toggle:active {
+  border: 11px solid #ffffff;
+  top: 20px;
+}
+
 .price-controls {
   font-size: 0;
 }
@@ -1858,6 +1865,35 @@ about us and contacts, footer, catalog styles */
   color: rgba(0, 0, 0, 1);
 }
 
+.catalog-content__sort-up,
+.catalog-content__sort-down {
+  display: block;
+  width: 11px;
+  height: 10px;
+  opacity: 0.2;
+}
+
+.catalog-content__sort-up {
+  background-image: url("../img/icon-up-dir.svg");
+}
+
+.catalog-content__sort-down {
+  background-image: url("../img/icon-down-dir.svg");
+}
+
+.catalog-content__sort-up:hover,
+.catalog-content__sort-up:focus,
+.catalog-content__sort-down:hover,
+.catalog-content__sort-down:focus {
+  opacity: 0.4;
+}
+
+.catalog-content__sort-up:active,
+.catalog-content__sort-down:active,
+.catalog-content__sort-down--current {
+  opacity: 1;
+}
+
 /* Cards styles */
 .catalog-content-cards__price {
   font-family: "Gilroy";
@@ -1872,6 +1908,36 @@ about us and contacts, footer, catalog styles */
 .catalog-content-cards__item img {
   width: 360px;
   height: 380px;
+}
+
+.catalog-content-cards__item .flag {
+  position: absolute;
+  top: 28px;
+  right: 28px;
+  
+  width: 61px;
+  height: 61px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  
+  /* text-indent: -1000px; */
+  overflow: hidden;
+  z-index: 10;
+}
+
+.catalog-content-cards__item .flag-new {
+  font-family: "Gilroy";
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.7px;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.2);
+  padding-top: 17px;
+  padding-bottom: 17px;
+  padding-left: 13px;
+  padding-right: 13px;
 }
 
 /* Pagination styles */
