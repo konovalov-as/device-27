@@ -32,11 +32,11 @@
                     </p>
                     <div class="main-header__top">
                         <div class="main-header__search-container">
-                            <label class="visually-hidden" for="searchSite">Поиск по сайту</label>
-                            <input class="main-header__search" id="searchSite" type="text" name="main-header__search" placeholder="Поиск по сайту">
-                            <div class="main-header__search-go">
-                                <button type="button">Найти</button>
-                            </div>
+                            <form class="main-header__search-form" action="http://echo.htmlacademy.ru" method="get">
+                                <label class="visually-hidden" for="searchSite">Поиск по сайту</label>
+                                <input class="main-header__search" id="searchSite" type="text" name="main-header__search" placeholder="Поиск по сайту">
+                                <button type="submit" class="main-header__search-button">Найти</button>
+                            </form>
                         </div>
                         <ul class="main-header__signin">
                             <li><a class="main-header__enter" href="">Войти</a></li>
@@ -47,29 +47,33 @@
                         </ul>
                     </div>
                     <nav class="main-header__navigation">
-                        <ul class="main-navigation">
-                            <li><a class="main-navigation__catalog-goods" href="catalog.html">Каталог товаров</a></li>
-                            <li><a href="">Доставка</a></li>
-                            <li><a href="">Гарантия</a></li>
-                            <li><a href="">Контакты</a></li>
+                        <ul class="main-navigation main-navigation__list">
+                            <li class="main-navigation__item">
+                                <a class="main-navigation__catalog-goods" href="catalog.html">Каталог товаров</a>
+                                <ul class="catalog-goods">
+                                    <div class="catalog-goods__block">
+                                        <li><a href="">Виртуальная реальность</a></li>
+                                        <li><a href="monopods.html">Моноподы для селфи</a></li>
+                                        <li><a href="">Экшн-камеры </a></li>
+                                    </div>
+                                    <div class="catalog-goods__block">
+                                        <li><a href="">Фитнес-браслеты</a></li>
+                                        <li><a href="">Умные часы</a></li>
+                                    </div>
+                                    <div class="catalog-goods__block">
+                                        <li><a href="">Квадрокоптеры</a></li>
+                                    </div>
+                                </ul>
+                            </li>
+                            <li class="main-navigation__item"><a href="">Доставка</a></li>
+                            <li class="main-navigation__item"><a href="">Гарантия</a></li>
+                            <li class="main-navigation__item"><a href="">Контакты</a></li>
                         </ul>
+                        <!-- <div class="main-header__catalog-goods"> -->
+
+                        <!-- </div> -->
                     </nav>
-                    <div class="main-header__catalog-goods">
-                        <ul class="catalog-goods">
-                            <div class="catalog-goods__block">
-                                <li><a href="">Виртуальная реальность</a></li>
-                                <li><a href="">Моноподы для селфи</a></li>
-                                <li><a href="">Экшн-камеры </a></li>
-                            </div>
-                            <div class="catalog-goods__block">
-                                <li><a href="">Фитнес-браслеты</a></li>
-                                <li><a href="">Умные часы</a></li>
-                            </div>
-                            <div class="catalog-goods__block">
-                                <li><a href="">Квадрокоптеры</a></li>
-                            </div>
-                        </ul>
-                    </div>
+
                 </header>
             </div>
         </div>
@@ -80,14 +84,26 @@
                 <section class="promo-slider">
                     <h2 class="visually-hidden">Слайдер с продаваемыми товарами</h2>
                     <div class="promo-slider__control">
-                        <div class="promo-slider__btn">
-                            <a class="btn-general promo-slider__detail" href="">Подробнее</a>
-                        </div>
-                        <div class="promo-slider__radio">
+                        <!-- <div class="promo-slider__radio"> -->
+                        <label for="slider-1">
+                            <input class="visually-hidden" type="radio" name="promoSlider" id="slider-1" checked>
+                            <span class="radio-indicator visually-hidden">Первый</span>
+                        </label>
+                        <label for="slider-2">
+                            <input class="visually-hidden" type="radio" name="promoSlider" id="slider-2" checked>
+                            <span class="radio-indicator"></span>
+                            Вторрой
+                        </label>
+                        <label for="slider-3">
+                            <input class="visually-hidden" type="radio" name="promoSlider" id="slider-3" checked>
+                            <span class="radio-indicator"></span>
+                            Третий
+                        </label>
+                        <!-- 
                             <input type="radio" name="promo-slide" class="promo-slider__slide" checked>
-                            <input type="radio" name="promo-slide" class="promo-slider__slide">
-                            <input type="radio" name="promo-slide" class="promo-slider__slide">
-                        </div>
+                            <input type="radio" name="promo-slide" class="promo-slider__slide" id="">
+                            <input type="radio" name="promo-slide" class="promo-slider__slide" id=""> -->
+                        <!-- </div> -->
                     </div>
                     <ul class="promo-slider__list">
                         <li class="promo-slider__item">
@@ -101,6 +117,10 @@
                                     метров
                                     длиной и весом всего 5 килограмм.
                                 </p>
+                                <div class="promo-slider__btn">
+                                    <a class="btn-general promo-slider__detail" href="">Подробнее</a>
+                                </div>
+
                                 <div class="promo-slider__desc">
                                     <div class="promo-slider__desc-item">
                                         <span class="promo-slider__desc-feature">8,5 м</span>
@@ -128,6 +148,9 @@
                                     соблюдать
                                     диету.
                                 </p>
+                                <div class="promo-slider__btn">
+                                    <a class="btn-general promo-slider__detail" href="">Подробнее</a>
+                                </div>
                                 <div class="promo-slider__desc">
                                     <div class="promo-slider__desc-item">
                                         <span class="promo-slider__desc-feature">48 часов</span>
@@ -147,6 +170,9 @@
                                     под
                                     стандартную камеру.
                                 </p>
+                                <div class="promo-slider__btn">
+                                    <a class="btn-general promo-slider__detail" href="">Подробнее</a>
+                                </div>
                                 <div class="promo-slider__desc">
                                     <div class="promo-slider__desc-item">
                                         <span class="promo-slider__desc-feature">800 м</span>
@@ -453,7 +479,7 @@
 
     </div>
 
-    <script src="js/script.js"></script>
+    <!-- <script src="js/script.js"></script> -->
 
 </body>
 
