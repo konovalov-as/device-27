@@ -69,9 +69,6 @@
                             <li class="main-navigation__item"><a href="">Гарантия</a></li>
                             <li class="main-navigation__item"><a href="">Контакты</a></li>
                         </ul>
-                        <!-- <div class="main-header__catalog-goods"> -->
-
-                        <!-- </div> -->
                     </nav>
 
                 </header>
@@ -83,35 +80,24 @@
             <div class="container-narrow">
                 <section class="promo-slider">
                     <h2 class="visually-hidden">Слайдер с продаваемыми товарами</h2>
+
+                    <input class="visually-hidden" type="radio" name="promoSlider" id="slider-1" checked>
+                    <input class="visually-hidden" type="radio" name="promoSlider" id="slider-2">
+                    <input class="visually-hidden" type="radio" name="promoSlider" id="slider-3">
+
                     <div class="promo-slider__control">
-                        <!-- <div class="promo-slider__radio"> -->
-                        <label for="slider-1">
-                            <input class="visually-hidden" type="radio" name="promoSlider" id="slider-1" checked>
-                            <span class="radio-indicator visually-hidden">Первый</span>
-                        </label>
-                        <label for="slider-2">
-                            <input class="visually-hidden" type="radio" name="promoSlider" id="slider-2" checked>
-                            <span class="radio-indicator"></span>
-                            Вторрой
-                        </label>
-                        <label for="slider-3">
-                            <input class="visually-hidden" type="radio" name="promoSlider" id="slider-3" checked>
-                            <span class="radio-indicator"></span>
-                            Третий
-                        </label>
-                        <!-- 
-                            <input type="radio" name="promo-slide" class="promo-slider__slide" checked>
-                            <input type="radio" name="promo-slide" class="promo-slider__slide" id="">
-                            <input type="radio" name="promo-slide" class="promo-slider__slide" id=""> -->
-                        <!-- </div> -->
+                        <label for="slider-1" aria-label="Первый"></label>
+                        <label for="slider-2" aria-label="Второй"></label>
+                        <label for="slider-3" aria-label="Третий"></label>
                     </div>
+
                     <ul class="promo-slider__list">
-                        <li class="promo-slider__item">
+                        <li class="promo-slider__item" id="promo-slider__item-1">
                             <div class="promo-slider__images">
                                 <img class="promo-slider__slide-1" src="img/promo-slider-1.png" alt="Три самых длинных палки для селфи черного цвета на трех ножках с черным ремешком " width="384" height="486">
                             </div>
                             <div class="promo-slider__content">
-                                <h3 class="promo-slider__header">Делай селфи, как Бен Стиллер! </h3>
+                                <h3 class="promo-slider__header">Делай селфи, <br> как Бен Стиллер! </h3>
                                 <p class="promo-slider__text">
                                     Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!)
                                     метров
@@ -120,7 +106,6 @@
                                 <div class="promo-slider__btn">
                                     <a class="btn-general promo-slider__detail" href="">Подробнее</a>
                                 </div>
-
                                 <div class="promo-slider__desc">
                                     <div class="promo-slider__desc-item">
                                         <span class="promo-slider__desc-feature">8,5 м</span>
@@ -137,12 +122,12 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="promo-slider__item">
+                        <li class="promo-slider__item" id="promo-slider__item-2">
                             <div class="promo-slider__images">
                                 <img class="promo-slider__slide-2" src="img/promo-slider-2.png" alt="Стильный черный фитнес-браслет с небольшим монохромным дисплеем" width="345" height="485">
                             </div>
                             <div class="promo-slider__content">
-                                <h3 class="promo-slider__header">Худеем правильно! </h3>
+                                <h3 class="promo-slider__header">Худеем <br> правильно! </h3>
                                 <p class="promo-slider__text">
                                     Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и
                                     соблюдать
@@ -159,7 +144,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="promo-slider__item">
+                        <li class="promo-slider__item" id="promo-slider__item-3">
                             <div class="promo-slider__images">
                                 <img class="promo-slider__slide-3" src="img/promo-slider-3.png" alt="Квадрокоптер с четыремя винтами и мощным лазером" width="526" height="334">
                             </div>
