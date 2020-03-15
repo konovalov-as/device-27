@@ -1409,7 +1409,11 @@ about us and contacts, footer, catalog styles */
   position: relative;
   box-shadow: 0px 10px 20px 0 rgba(4, 6, 6, 0.2);
   margin: 0 auto;
-  position: relative;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
 }
 
 .modal__close {
@@ -1441,6 +1445,7 @@ about us and contacts, footer, catalog styles */
   padding-bottom: 95px;
   padding-left: 100px;
   padding-right: 100px;
+  background-color: white;
 }
 
 .modal__form-container {
@@ -1507,6 +1512,14 @@ about us and contacts, footer, catalog styles */
 .modal__map-big-interactive {
   width: 960px;
   height: 559px;
+}
+
+.modal {
+  display: none;
+}
+
+.modal--show {
+  display: block;
 }
 
 /* Page catalog styles */
