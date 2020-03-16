@@ -271,6 +271,8 @@ filter, sort, catalog, pagination styles */
 
 .main-header__signin a:hover,
 .main-header__signin a:focus,
+.main-header__signout a:hover,
+.main-header__signout a:focus,
 .main-header__service a:hover,
 .main-header__service a:focus,
 .main-navigation a:hover,
@@ -281,6 +283,7 @@ filter, sort, catalog, pagination styles */
 }
 
 .main-header__signin a:active,
+.main-header__signout a:active,
 .main-header__service a:active,
 .main-navigation a:active,
 .catalog-goods a:active {
@@ -727,6 +730,48 @@ about us and contacts, footer, catalog styles */
   box-shadow: 0 0 1px 2px #4A90E2;
 }
 
+/* Figures */
+.promo-slider__header {
+  position: relative;
+  z-index: 10;
+}
+
+.promo-slider__header::before {
+  content: "";
+  position: absolute;
+  top: -42px;
+  left: 2px;
+  width: 100px;
+  height: 7px;
+  background-color: white;
+}
+
+.promo-slider__header::after {
+  font-family: "Gilroy";
+  font-weight: 800;
+  font-size: 179px;
+  text-align: right;
+  line-height: 179px;
+  letter-spacing: 1.79px;
+  color: white;
+  position: absolute;
+  z-index: -1;
+  top: -94px;
+  right: -14px;
+}
+
+.promo-slider__item:nth-child(1) .promo-slider__header::after {
+  content: "01";
+}
+
+.promo-slider__item:nth-child(2) .promo-slider__header::after {
+  content: "02";
+}
+
+.promo-slider__item:nth-child(3) .promo-slider__header::after {
+  content: "03";
+}
+
 /* Assortment, filter, catalog styles */
 .assortment__desc,
 .catalog-filter__form-goods legend,
@@ -1119,6 +1164,7 @@ about us and contacts, footer, catalog styles */
   margin-bottom: 39px;
 }
 
+.contacts__map,
 .contacts__map-interactive {
   margin-bottom: 77px;
 }
@@ -1400,6 +1446,24 @@ about us and contacts, footer, catalog styles */
 
 /* Modal windows */
 /* Write to us */
+.hidden {
+  display: none;
+}
+
+.no-js .hidden {
+  display: block;
+}
+
+.no-js .modal__write-to-us {
+  position: absolute;
+  transform: translate(-50%, 2550px);
+}
+
+.no-js .modal__map {
+  position: absolute;
+  transform: translate(-50%, 3250px);
+}
+
 .modal__form-your-name,
 .modal__form-your-email,
 .modal__form-text-letter {
@@ -1570,13 +1634,46 @@ about us and contacts, footer, catalog styles */
   }
 }
 
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-50%, -100%, 0);
+    transform: translate3d(-50% -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-50%, -100%, 0);
+    transform: translate3d(-50%, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+  }
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
 .modal {
   display: none;
 }
 
 .modal--show {
   display: block;
-  animation: bounce 0.6s;
+  animation: fadeInDown 0.6s;
 }
 
 .modal__form-your-name-input--error,
@@ -1744,6 +1841,7 @@ about us and contacts, footer, catalog styles */
   display: flex;
   flex-wrap: wrap;
   margin-bottom: -11px;
+  max-width: 760px;
 }
 
 .catalog-content-cards__item {

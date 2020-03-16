@@ -1,9 +1,30 @@
-let openContactsMapInteractive = document.querySelector(".contacts__map-interactive");
+// noJS
+let noJS = document.querySelector("html");
+noJS.classList.remove("no-js");
+
+let contactsMap = document.querySelector(".contacts__map");
+contactsMap.classList.add("visually-hidden");
+
+let modalMapBig = document.querySelector(".modal__map-big");
+modalMapBig.classList.add("visually-hidden");
+
+let contactsMapInteractive = document.querySelector(".contacts__map-interactive");
+contactsMapInteractive.classList.remove("visually-hidden");
+
+let modalMmapBigInteractive = document.querySelector(".modal__map-big-interactive");
+modalMmapBigInteractive.classList.remove("visually-hidden");
+// noJS
+
+let modalWriteToUs = document.querySelector(".modal__write-to-us");
+modalWriteToUs.classList.remove("hidden");
+
 let modalMap = document.querySelector(".modal__map");
+modalMap.classList.remove("hidden");
+
+let openContactsMapInteractive = document.querySelector(".contacts__map-interactive");
 let modalCloseMap = document.querySelector(".modal__close-map");
 
 let openContactsWriteToUs = document.querySelector(".contacts__write-to-us");
-let modalWriteToUs = document.querySelector(".modal__write-to-us");
 let modalCloseWriteToUs = document.querySelector(".modal__close-form-write-to-us");
 
 let submitFormWriteToUs = modalWriteToUs.querySelector(".modal__submit-form-write-to-us");
