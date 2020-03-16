@@ -314,7 +314,6 @@ filter, sort, catalog, pagination styles */
 .main-header__service,
 .main-header__signout {
   display: flex;
-  /* justify- content: space-between; */
 }
 
 .main-header__top {
@@ -560,8 +559,6 @@ filter, sort, catalog, pagination styles */
 /* Promo slider, services slider,
 about us and contacts, footer, catalog styles */
 .main-page {
-  /* position: relative;
-  top: -111px; */
   margin-top: -111px;
 }
 
@@ -592,7 +589,6 @@ about us and contacts, footer, catalog styles */
 }
 
 .services-slider-bg {
-  /* background-color: #e5e5e5; */
   background-image: linear-gradient(to bottom, transparent 27px, #e5e5e5 -27px);
 }
 
@@ -1016,7 +1012,9 @@ about us and contacts, footer, catalog styles */
 }
 
 .partners__list a {
-  opacity: 0.5;
+  display: block;
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
   filter: grayscale(1);
 }
 
@@ -1122,7 +1120,6 @@ about us and contacts, footer, catalog styles */
 }
 
 .contacts__map-interactive {
-  /* padding-left: 3px; */
   margin-bottom: 77px;
 }
 
@@ -1483,13 +1480,6 @@ about us and contacts, footer, catalog styles */
   padding: 20px;
 }
 
-.modal__form-container input {
-  /* height: 50px;
-  border: 3px solid #f2f2f2;
-  background-color: #f2f2f2;
-  padding: 20px; */
-}
-
 .modal__form-container input:hover,
 .modal__form-text-letter textarea:hover {
   background-color: #eaeaea;
@@ -1684,14 +1674,11 @@ about us and contacts, footer, catalog styles */
   display: flex;
   flex-basis: 272px;
   flex-shrink: 0;
-  /* padding-right: 60px; */
-  /* padding-bottom: 70px; */
 }
 
 .catalog-container-right {
   display: flex;
   width: 100%;
-  /* padding-bottom: 70px; */
 }
 
 .catalog-filter {
@@ -1774,8 +1761,6 @@ about us and contacts, footer, catalog styles */
 }
 
 .catalog-content-cards__product {
-  /* order: -1; */
-  /* margin-bottom: 35px; */
   max-width: 275px;
 }
 
@@ -1784,12 +1769,8 @@ about us and contacts, footer, catalog styles */
 }
 
 .catalog-content-cards__img {
-  /* position: relative; */
-  /* z-index: 1; */
   order: -1;
   background-color: rgb(239, 239, 239, 1);
-  /* background-color: #efefef; */
-  /* background-color: red; */
   min-height: 379px;
   margin-bottom: 32px;
 }
@@ -1800,19 +1781,8 @@ about us and contacts, footer, catalog styles */
   height: 380px;
 }
 
-.catalog-content-cards__title {
-  /* max-width: 255px; */
-  /* width: 100%; */
-}
-
-.catalog-content-cards__actions {
-  display: flex;
-  flex-wrap: wrap;
-  width: 150px;
-  position: absolute;
-  top: 38%;
-  left: 25%;
-  z-index: 10;
+.catalog-content-cards__basket {
+  margin-bottom: 15px;
 }
 
 .catalog-content-cards__actions .catalog-content-cards__compare {
@@ -1825,10 +1795,6 @@ about us and contacts, footer, catalog styles */
   text-align: center;
 }
 
-.catalog-content-cards__basket {
-  margin-bottom: 15px;
-}
-
 .catalog-content-cards__compare:hover,
 .catalog-content-cards__compare:focus {
   color: rgba(0, 0, 0, 1);
@@ -1838,36 +1804,32 @@ about us and contacts, footer, catalog styles */
   color: rgba(0, 0, 0, 0.2);
 }
 
-.catalog-content-cards__basket,
-.catalog-content-cards__compare {
-  /* display: block;
-  cursor: pointer;
-  z-index: 15; */
-}
-
 .catalog-content-cards__actions {
-  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(238, 238, 238, 0.7);
+  z-index: 10;
+  height: 380px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-.catalog-content-cards__img:hover {
-  /* background-color: rgb(239, 239, 239, 0.7); */
-}
-
-.catalog-content-cards__img:hover img {
-  opacity: 0.7;
-}
-
-.catalog-content-cards__img:hover ~ .catalog-content-cards__actions,
+.catalog-content-cards__actions:hover,
 .catalog-content-cards__img:focus ~ .catalog-content-cards__actions {
-  display: block;
+  opacity: 1;
 }
 
 /* Pagination style */
 .catalog-content-pagination {
   display: flex;
   justify-content: space-between;
-  /* padding: 22px; */
-  /* width: 760px; */
   margin-left: 72px;
 }
 
@@ -1965,37 +1927,10 @@ about us and contacts, footer, catalog styles */
   margin-bottom: 15px;
 }
 
-/* Range */
-/* Style HTML Academy */
-.filter-item {
-  /* margin: 0; */
-  /* padding: 0; */
-  /* border: none; */
-  /* Для демонстрации */
-  /* width: 260px; */
-  /* margin: 50px auto;  */
-}
-
-.range-filter {
-  /* width: 260px; */
-  /* margin-top: 49px; */
-}
-
-.filter-item legend {
-  /* font-size: 18px; */
-  /* line-height: 24px; */
-  /* text-transform: uppercase; */
-  /* font-weight: 700; */
-}
-
 .range-controls {
   position: relative;
   height: 41px;
-  /* margin-bottom: 15px; */
   padding-top: 35px;
-  /* padding-right: 50px; */
-  /* padding-left: 10px; */
-  /* background-color: #f1f1f1; */
   border-radius: 5px;
   width: 205px;
   margin-bottom: 4px;
@@ -2069,23 +2004,13 @@ about us and contacts, footer, catalog styles */
   font-weight: 300;
   font-size: 14px;
   line-height: 24px;
-  /* text-align: center; */
   color: rgba(0, 0, 0, 0.2);
-}
-
-.price-controls label {
-  /* display: inline-block; */
-  /* vertical-align: middle; */
-  /* width: 50%; */
 }
 
 .price-controls input {
   width: 37px;
-  /* padding: 8px 10px; */
-  /* margin-left: 10px; */
   border: none;
   border-radius: 5px;
-  /* background: #efefef; */
   background-color: transparent;
 }
 
@@ -2098,13 +2023,8 @@ about us and contacts, footer, catalog styles */
   margin-right: 36px;
 }
 
-.max-price {
-  /* text-align: right; */
-}
-/* Style HTML Academy */
-
 /* checkbox */
-.catalog-filter__color-item label{
+.catalog-filter__color-item label {
   position: relative;
   padding-left: 40px;
   cursor: pointer;
@@ -2287,11 +2207,6 @@ a.catalog-content__sort-price--current {
   color: #464646;
 }
 
-.catalog-content-cards__item img {
-  /* width: 360px;
-  height: 380px; */
-}
-
 .catalog-content-cards__item .flag {
   position: absolute;
   top: 29px;
@@ -2300,10 +2215,6 @@ a.catalog-content__sort-price--current {
   height: 60px;
   border: 2px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  
-  /* text-indent: -1000px;
-  overflow: hidden;
-  z-index: 10; */
 }
 
 .catalog-content-cards__item .flag-new {
