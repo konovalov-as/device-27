@@ -48,7 +48,7 @@ img {
 }
 
 .wrapper {
-  margin-top: 41px;
+  margin-top: 40px;
 }
 
 body {
@@ -89,15 +89,32 @@ body {
 .btn-general {
   position: relative;
   z-index: 10;
+  display: block;
+  text-align: center;
   font-family: "Gilroy";
   font-weight: 800;
   font-size: 18px;
-  text-align: center;
   line-height: 24px;
   letter-spacing: 3.6px;
   text-transform: uppercase;
   text-decoration: none;
   color: black;
+}
+
+.btn-general-w160 {
+  width: 160px;
+}
+
+.btn-general-w200 {
+  width: 200px;
+}
+
+.btn-general-w220 {
+  width: 220px;
+}
+
+.btn-general-w260 {
+  width: 260px;
 }
 
 .btn-general::before {
@@ -106,7 +123,8 @@ body {
   z-index: -1;
   top: 50%;
   transform: translateY(-50%);
-  width: 220px;
+  left: 0;
+  right: 0;
   height: 8px;
   background-color: #f0c52e;
 }
@@ -633,8 +651,8 @@ about us and contacts, footer, catalog styles */
 }
 
 .promo-slider__text {
-  margin-bottom: 51px;
-  max-width: 480px;
+  margin-bottom: 52px;
+  max-width: 481px;
 }
 
 .promo-slider__slide {
@@ -825,7 +843,7 @@ about us and contacts, footer, catalog styles */
 }
 
 .contacts__title::before {
-  left: 3px;
+  left: 0px;
 }
 
 /* Serices slider style */
@@ -858,6 +876,8 @@ about us and contacts, footer, catalog styles */
 .services-slider__btn {
   position: relative;
   z-index: 10;
+  display: block;
+  text-align: center;
   font-family: "Gilroy";
   font-weight: 800;
   font-size: 18px;
@@ -877,7 +897,8 @@ about us and contacts, footer, catalog styles */
   z-index: -1;
   top: 50%;
   transform: translateY(-50%);
-  width: 160px;
+  left: 0;
+  right: 0;
   height: 8px;
   background-color: #f0c52e;
 }
@@ -927,7 +948,7 @@ about us and contacts, footer, catalog styles */
   top: 12px;
   right: 66px;
   width: 171px;
-  height: 164px;
+  height: 194px;
   background-repeat: no-repeat;
   background-position: center;
   background-image: url("../img/warranty.svg");
@@ -967,6 +988,7 @@ about us and contacts, footer, catalog styles */
   color: #f7e184;
   background: none;
   background-color: #000000;
+  width: 100%;
 }
 
 .services-delivery:checked ~ .services-slider__buttons .services-slider__btn--delivery::before,
@@ -1048,7 +1070,7 @@ about us and contacts, footer, catalog styles */
 
 .about-us-contacts {
   display: flex;
-  margin-bottom: 85px;
+  margin-bottom: 90px;
 }
 
 .about-us__title,
@@ -1059,7 +1081,7 @@ about us and contacts, footer, catalog styles */
 
 .about-us__paragraph {
   margin-bottom: 30px;
-  max-width: 468px;
+  max-width: 467px;
   letter-spacing: 0.11px;
 }
 
@@ -1069,7 +1091,7 @@ about us and contacts, footer, catalog styles */
 }
 
 .about-us__list {
-  margin-bottom: 60px;
+  margin-bottom: 63px;
 }
 
 .about-us__list li {
@@ -1092,7 +1114,7 @@ about us and contacts, footer, catalog styles */
 }
 
 .contacts {
-  padding-left: 17px;
+  padding-left: 20px;
 }
 
 .contacts__paragraph {
@@ -1100,8 +1122,8 @@ about us and contacts, footer, catalog styles */
 }
 
 .contacts__map-interactive {
-  padding-left: 3px;
-  margin-bottom: 80px;
+  /* padding-left: 3px; */
+  margin-bottom: 77px;
 }
 
 /* Footer styles */
@@ -1372,7 +1394,7 @@ about us and contacts, footer, catalog styles */
   position: absolute;
   background-repeat: no-repeat;
   background-position: center;
-  bottom: 11px;
+  bottom: 12px;
   left: 0;
   width: 80px;
   height: 7px;
@@ -1453,11 +1475,19 @@ about us and contacts, footer, catalog styles */
   margin-bottom: 40px;
 }
 
-.modal__form-container input {
+.modal__form-your-name-input,
+.modal__form-your-email-input {
   height: 50px;
   border: 3px solid #f2f2f2;
   background-color: #f2f2f2;
   padding: 20px;
+}
+
+.modal__form-container input {
+  /* height: 50px;
+  border: 3px solid #f2f2f2;
+  background-color: #f2f2f2;
+  padding: 20px; */
 }
 
 .modal__form-container input:hover,
@@ -1514,13 +1544,58 @@ about us and contacts, footer, catalog styles */
   height: 559px;
 }
 
+/* Modal Animation */
+@keyframes bounce {
+  0% {
+    transform: translate(-50%, -2000px);
+  }
+  70% {
+    transform: translate(-50%, 30px);
+  }
+  90% {
+    transform: translate(-50%, -10px);
+  }
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translate(0, -50%);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translate(-10px, -50%);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translate(10px, -50%);
+  }
+}
+
 .modal {
   display: none;
 }
 
 .modal--show {
   display: block;
+  animation: bounce 0.6s;
 }
+
+.modal__form-your-name-input--error,
+.modal__form-your-email-input--error {
+  background-color: #f6dada;
+  border-color: #f6dada;
+  color: rgba(70, 70, 70, 0.4);
+}
+
 
 /* Page catalog styles */
 /* Main content styles */
@@ -1844,6 +1919,7 @@ about us and contacts, footer, catalog styles */
 }
 
 .catalog-filter__submit {
+  background-color: transparent;
   padding: 0;
   border: 0;
 }
@@ -1869,7 +1945,7 @@ about us and contacts, footer, catalog styles */
 
 .catalog-filter__range,
 .catalog-filter__color {
-  margin-bottom: 44px;
+  margin-bottom: 40px;
 }
 
 .catalog-filter__color legend {
@@ -1877,11 +1953,12 @@ about us and contacts, footer, catalog styles */
 }
 
 .catalog-filter__bluetooth {
-  margin-bottom: 30px;
+  margin-bottom: 31px;
 }
 
 .catalog-filter__bluetooth legend{
   margin-bottom: 24px;
+  margin-top: 4px;
 }
 
 .catalog-filter__bluetooth-list li {
@@ -1915,12 +1992,13 @@ about us and contacts, footer, catalog styles */
   position: relative;
   height: 41px;
   /* margin-bottom: 15px; */
-  padding-top: 30px;
+  padding-top: 35px;
   /* padding-right: 50px; */
   /* padding-left: 10px; */
   /* background-color: #f1f1f1; */
   border-radius: 5px;
   width: 205px;
+  margin-bottom: 4px;
 }
 
 .range-controls .scale {
@@ -1936,7 +2014,7 @@ about us and contacts, footer, catalog styles */
 
 .range-controls .toggle {
   position: absolute;
-  top: 21px;
+  top: 25px;
   left: 0;
   width: 4px;
   height: 4px;
@@ -1961,17 +2039,24 @@ about us and contacts, footer, catalog styles */
 }
 
 .range-controls .toggle-min {
-  left: 0px;
+  left: -4px;
 }
 
 .range-controls .toggle-max {
-  left: 110px;
+  left: 109px;
 }
 
 .range-controls .toggle:active {
   border: 11px solid #ffffff;
-  top: 20px;
-  left: -1px;
+  top: 24px;
+}
+
+.range-controls .toggle-min:active {
+  left: -5px;
+}
+
+.range-controls .toggle-max:active {
+  left: 108px;
 }
 
 .price-controls {
@@ -1984,7 +2069,7 @@ about us and contacts, footer, catalog styles */
   font-weight: 300;
   font-size: 14px;
   line-height: 24px;
-  text-align: center;
+  /* text-align: center; */
   color: rgba(0, 0, 0, 0.2);
 }
 
@@ -2010,7 +2095,11 @@ about us and contacts, footer, catalog styles */
 }
 
 .max-price {
-  text-align: right;
+  margin-right: 36px;
+}
+
+.max-price {
+  /* text-align: right; */
 }
 /* Style HTML Academy */
 
@@ -2023,7 +2112,7 @@ about us and contacts, footer, catalog styles */
 
 .catalog-filter__color-item input[type="checkbox"] + .checkbox-indicator {
   position: absolute;
-  top: 0px;
+  top: -2px;
   left: 0px;
   width: 23px;
   height: 23px;
@@ -2079,7 +2168,7 @@ about us and contacts, footer, catalog styles */
 
 .catalog-filter__bluetooth-item input[type="radio"] + .radio-indicator {
   position: absolute;
-  top: 0px;
+  top: -2px;
   left: 0px;
   width: 25px;
   height: 25px;
