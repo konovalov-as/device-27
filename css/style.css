@@ -665,18 +665,16 @@ about us and contacts, footer, catalog styles */
 
 .promo-slider__item {
   display: none;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  width: 1040px;
 }
 
-.promo-slider__images {
-  margin-left: 30px;
+.promo-slider__item:nth-child(3) .promo-slider__images {
+  margin-left: 5px; 
 }
 
 .promo-slider__content {
-  max-width: 502px;
-  width: 100%;
+  width: 516px;
+  margin-left: auto;
 }
 
 .promo-slider__header {
