@@ -437,7 +437,7 @@ filter, sort, catalog, pagination styles */
   padding-right: 60px;
   position: absolute;
   left: 0;
-  z-index: 10;
+  z-index: 11;
   background-color: #f7e296;
   visibility: hidden;
   opacity: 0;
